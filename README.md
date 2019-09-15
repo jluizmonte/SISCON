@@ -1,4 +1,4 @@
- [![NSOFT](https://goreportcard.com/badge/github.com/gobuffalo/tags)](https://goreportcard.com/report/github.com/gobuffalo/tags)
+[I'm an inline-style link](https://www.google.com)
 
 # SISCON
 ### Sistema de Controle de Estoque e Vendas
