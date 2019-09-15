@@ -1,0 +1,19 @@
+package siscon.service;
+
+import java.util.ArrayList;
+import siscon.model.VendasClientesModel;
+import siscon.model.dao.VendasClientesDao;
+
+/**
+ *
+ * @author joseluiz
+ */
+public class VendasClientesService {
+
+    VendasClientesDao vendasClientesDao = new VendasClientesDao();
+
+    public ArrayList<VendasClientesModel> getListaVendasClienteDAO() {
+        return vendasClientesDao.getListaVendasClienteDAO();
+    }
+
+}

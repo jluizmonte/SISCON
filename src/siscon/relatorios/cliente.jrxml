@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cliente" pageWidth="907" pageHeight="595" orientation="Landscape" columnWidth="867" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d3eaa470-9165-476c-9f34-f59b7d4b8b5d">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MySQL"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="587"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="413"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString>
+		<![CDATA[SELECT * FROM tbl_cliente]]>
+	</queryString>
+	<field name="pk_id_cliente" class="java.lang.Long"/>
+	<field name="cli_nome" class="java.lang.String"/>
+	<field name="cli_endereco" class="java.lang.String"/>
+	<field name="cli_numero" class="java.lang.String"/>
+	<field name="cli_bairro" class="java.lang.String"/>
+	<field name="cli_cidade" class="java.lang.String"/>
+	<field name="cli_uf" class="java.lang.String"/>
+	<field name="cli_cep" class="java.lang.String"/>
+	<field name="cli_telefone" class="java.lang.String"/>
+	<field name="cli_celular" class="java.lang.String"/>
+	<field name="cli_email" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="910" height="92" backcolor="#006699" uuid="5bd89509-48c7-4db2-8a62-892c216729c4"/>
+				<staticText>
+					<reportElement x="20" y="20" width="380" height="43" forecolor="#FFFFFF" uuid="c7d198f6-d41d-4729-9d21-25cb5111100a"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Clientes Salvos até:]]></text>
+				</staticText>
+				<textField pattern="dd/MM/yyyy">
+					<reportElement x="407" y="27" width="260" height="38" forecolor="#FFFFFF" uuid="d98f19d8-d9f1-46e0-8f35-952ac4aba8ed"/>
+					<textElement>
+						<font size="26"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23">
+			<line>
+				<reportElement x="-20" y="21" width="907" height="1" forecolor="#666666" uuid="8a1d48d6-2e7a-4141-acb7-c94030b60e95"/>
+			</line>
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-13" width="910" height="34" forecolor="#00B3E3" backcolor="#2F5797" uuid="2cc437e1-4e90-4e08-845e-b9ac1d47dcfd"/>
+				<staticText>
+					<reportElement mode="Transparent" x="20" y="6" width="40" height="23" forecolor="#FFFFFF" backcolor="#DBDBDB" uuid="0191efce-0b47-4940-a93f-35a5b954fae0"/>
+					<textElement textAlignment="Center">
+						<font size="18"/>
+					</textElement>
+					<text><![CDATA[id]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="69" y="8" width="79" height="19" forecolor="#FFFFFF" backcolor="#DBDBDB" uuid="626ec7a8-b5d6-4412-9512-b0ce7b8becbf"/>
+					<textElement textAlignment="Center">
+						<font size="15"/>
+					</textElement>
+					<text><![CDATA[Nome]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="159" y="8" width="100" height="19" forecolor="#FFFFFF" backcolor="#2E4A62" uuid="8b81b7e1-c8a2-4dcc-9872-31548d10e46b"/>
+					<textElement textAlignment="Center">
+						<font size="15"/>
+					</textElement>
+					<text><![CDATA[Rua]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="270" y="8" width="60" height="19" forecolor="#FFFFFF" backcolor="#DBDBDB" uuid="99d52bf8-eeb3-42d5-9b51-7404eb8f58c3"/>
+					<textElement textAlignment="Center">
+						<font size="15"/>
+					</textElement>
+					<text><![CDATA[Numero]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="337" y="8" width="100" height="19" forecolor="#FFFFFF" backcolor="#DBDBDB" uuid="6523d47c-74d1-44dc-81b7-9fc1296ad002"/>
+					<textElement textAlignment="Center">
+						<font size="15"/>
+					</textElement>
+					<text><![CDATA[Bairro]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="450" y="8" width="100" height="19" forecolor="#FFFFFF" backcolor="#DBDBDB" uuid="404d52fa-161d-47de-b1a9-b1f87b0551a9"/>
+					<textElement textAlignment="Center">
+						<font size="15"/>
+					</textElement>
+					<text><![CDATA[Cidade]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="560" y="8" width="42" height="19" forecolor="#FFFFFF" backcolor="#DBDBDB" uuid="f9a283ad-86f9-416d-98cd-da968c06371d"/>
+					<textElement textAlignment="Center">
+						<font size="16"/>
+					</textElement>
+					<text><![CDATA[UF]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="610" y="8" width="57" height="19" forecolor="#FFFFFF" backcolor="#DBDBDB" uuid="48b33e72-6f89-42f9-ac9f-fa53f8839544"/>
+					<textElement textAlignment="Center">
+						<font size="16"/>
+					</textElement>
+					<text><![CDATA[CEP]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="680" y="8" width="80" height="19" forecolor="#FFFFFF" backcolor="#DBDBDB" uuid="f72da128-98a8-4ac4-9d5a-54cb71872e67"/>
+					<textElement textAlignment="Center">
+						<font size="16"/>
+					</textElement>
+					<text><![CDATA[Telefone]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="845" y="8" width="58" height="19" forecolor="#FFFFFF" backcolor="#DBDBDB" uuid="f69b6b60-fd8d-459d-be79-08f3ac4b7a44"/>
+					<textElement textAlignment="Center">
+						<font size="16"/>
+					</textElement>
+					<text><![CDATA[Email]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="43">
+			<textField>
+				<reportElement x="0" y="6" width="40" height="30" uuid="b1a1726e-7610-403a-b48e-6d045e817aca"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{pk_id_cliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="6" width="79" height="30" uuid="0e624ca1-dbac-4242-aa7d-7343fe58e5c8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cli_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="6" width="100" height="30" uuid="dfdb87ae-d0c7-4b4c-9194-57bbe13fa4d6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cli_endereco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="6" width="60" height="30" uuid="45e34fc6-c9d8-4b98-a3ee-9f4630f579ea"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cli_numero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="6" width="100" height="30" uuid="7635a1b4-0781-44cb-bce3-dca5b7575c91"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cli_bairro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="6" width="100" height="30" uuid="612e5464-1a7a-4dd0-bfd0-367191c367e7"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cli_cidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="540" y="6" width="41" height="30" uuid="4cf8d834-9d45-4cff-a715-15dff35854f6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cli_uf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="590" y="6" width="59" height="30" uuid="5675b807-a77e-4046-bd20-9e46e44624a2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cli_cep}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="660" y="6" width="70" height="30" uuid="f6868c2e-8660-4904-9f30-57c0edc9ec11"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cli_telefone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="822" y="6" width="61" height="30" uuid="43e47de1-4c6b-46da-9c26-a55debbb11fa"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cli_email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="825" height="17" backcolor="#E6E6E6" uuid="c26c5bcb-a6bf-4aef-a3b7-f94161ba32af"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="825" y="0" width="62" height="17" backcolor="#E6E6E6" uuid="bb68d319-89cf-4138-9264-d4a6fb79b75d"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="d MMM yyyy h:mm:ss a">
+				<reportElement x="0" y="4" width="180" height="13" uuid="a5664752-4fd1-4a53-b468-3601ba46ee4b"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
