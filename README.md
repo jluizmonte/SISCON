@@ -1,5 +1,4 @@
- [![NSOFT](https://travis-ci.org/gobuffalo/tags.svg?branch=master)](https://travis-ci.org/gobuffalo/tags)
-
+ [![NSOFT](https://goreportcard.com/badge/github.com/gobuffalo/tags)](https://goreportcard.com/report/github.com/gobuffalo/tags)
 
 # SISCON
 ### Sistema de Controle de Estoque e Vendas
