@@ -330,7 +330,7 @@ public class UsuarioView extends javax.swing.JInternalFrame {
          * exibidos na tabela
          */
         listaModelUsuarios = usuarioService.getListaUsuarioDAO();
-        DefaultTableModel modelo = (DefaultTableModel) jtUsuario.getModel();
+       DefaultTableModel  modelo = (DefaultTableModel) jtUsuario.getModel();
         modelo.setNumRows(0);
 
         // insere os clientes na tabela
