@@ -27,7 +27,7 @@ public class ClienteView extends javax.swing.JInternalFrame {
     public ClienteView() {
         initComponents();
         desabilitaHabilitaCampos(false); //desabilita o formulário
-        carregarCliente(); //carrega os clientes já cadastrados na tabela
+       // carregarCliente(); //carrega os clientes já cadastrados na tabela
     }
 
     /**
