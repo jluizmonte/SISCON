@@ -31,6 +31,7 @@ public class LoginView extends javax.swing.JFrame {
         URL caminhoImagem = this.getClass().getResource("/siscon/icone/login.png");
         Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(caminhoImagem);
         setIconImage(iconeTitulo);
+        setTitle("Realize o Login");
         this.setUndecorated(true);
         initComponents();
         setLocationRelativeTo(null); //centraliza a janela
@@ -107,7 +108,7 @@ public class LoginView extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setText("Senha:");
 
-        jtfSenha.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jtfSenha.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jtfSenha.setBorder(null);
         jtfSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,7 +136,7 @@ public class LoginView extends javax.swing.JFrame {
             }
         });
 
-        jtfLogin.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jtfLogin.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jtfLogin.setBorder(null);
         jtfLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,14 +173,14 @@ public class LoginView extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(jtfLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
-                .addGroup(uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(jtfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
                 .addGroup(uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbSair, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(2, 2, 2))
+                    .addComponent(jtfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addGap(18, 18, 18)
+                .addGroup(uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jbEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                    .addComponent(jbSair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/security/login (cópia).png"))); // NOI18N
