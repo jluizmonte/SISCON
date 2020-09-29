@@ -1,8 +1,8 @@
-package siscon.service;
+package br.com.siscon.service;
 
 import java.util.ArrayList;
-import siscon.model.ClienteModel;
-import siscon.model.dao.ClienteDao;
+import br.com.siscon.model.ClienteModel;
+import br.com.siscon.model.dao.ClienteDao;
 
 /**
  *

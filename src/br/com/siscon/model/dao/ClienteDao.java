@@ -1,8 +1,8 @@
-package siscon.model.dao;
+package br.com.siscon.model.dao;
 
+import br.com.siscon.connection.ConexaoMySql;
 import java.sql.SQLException;
-import siscon.model.ClienteModel;
-import siscon.connection.ConexaoMySql;
+import br.com.siscon.model.ClienteModel;
 import java.util.ArrayList;
 
 /**

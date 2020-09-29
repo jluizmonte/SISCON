@@ -1,9 +1,7 @@
-package siscon.util;
+package br.com.siscon.util;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *

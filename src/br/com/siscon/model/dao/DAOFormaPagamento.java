@@ -1,7 +1,7 @@
-package siscon.model.dao;
+package br.com.siscon.model.dao;
 
-import siscon.model.FormaPagamentoModel;
-import siscon.connection.ConexaoMySql;
+import br.com.siscon.connection.ConexaoMySql;
+import br.com.siscon.model.FormaPagamentoModel;
 import java.util.ArrayList;
 
 /**

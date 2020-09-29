@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package siscon.service;
+package br.com.siscon.service;
 
 import java.util.ArrayList;
-import siscon.model.VendasModel;
-import siscon.model.dao.VendasDao;
+import br.com.siscon.model.VendasModel;
+import br.com.siscon.model.dao.VendasDao;
 
 /**
  *

@@ -1,28 +1,28 @@
-package siscon.view;
+package br.com.siscon.view;
 
 import java.util.ArrayList;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import javax.swing.JOptionPane;
-import siscon.util.Datas;
+import br.com.siscon.util.Datas;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
-import siscon.model.ClienteModel;
-import siscon.model.ProdutoModel;
-import siscon.model.ProdutosVendasProdutosModel;
-import siscon.model.VendasClientesModel;
-import siscon.model.VendasModel;
-import siscon.model.VendasProdutosModel;
-import siscon.service.ClienteService;
-import siscon.service.ProdutoService;
-import siscon.service.ProdutosVendasProdutosService;
-import siscon.service.VendasClientesService;
-import siscon.service.VendasProdutosService;
-import siscon.service.VendasService;
+import br.com.siscon.model.ClienteModel;
+import br.com.siscon.model.ProdutoModel;
+import br.com.siscon.model.ProdutosVendasProdutosModel;
+import br.com.siscon.model.VendasClientesModel;
+import br.com.siscon.model.VendasModel;
+import br.com.siscon.model.VendasProdutosModel;
+import br.com.siscon.service.ClienteService;
+import br.com.siscon.service.ProdutoService;
+import br.com.siscon.service.ProdutosVendasProdutosService;
+import br.com.siscon.service.VendasClientesService;
+import br.com.siscon.service.VendasProdutosService;
+import br.com.siscon.service.VendasService;
 
 /**
  *
@@ -202,7 +202,7 @@ public class VendasView extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(jtProdutosVendas);
 
         jbCancelar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Actions18x18/cancelar/icons8-cancelar-2-24.png"))); // NOI18N
+        jbCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-cancelar-2-24.png"))); // NOI18N
         jbCancelar.setText("Cancelar");
         jbCancelar.setToolTipText("Cancelar Venda");
         jbCancelar.setEnabled(false);
@@ -213,7 +213,7 @@ public class VendasView extends javax.swing.JInternalFrame {
         });
 
         jbNovo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Actions18x18/novo/icons8-adicionar-arquivo-24.png"))); // NOI18N
+        jbNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-adicionar-arquivo-24.png"))); // NOI18N
         jbNovo.setText("Novo");
         jbNovo.setToolTipText("Nova Venda");
         jbNovo.addActionListener(new java.awt.event.ActionListener() {
@@ -223,7 +223,7 @@ public class VendasView extends javax.swing.JInternalFrame {
         });
 
         jbSalvar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Actions18x18/salvar/icons8-salvar-24.png"))); // NOI18N
+        jbSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-salvar-24.png"))); // NOI18N
         jbSalvar.setText("Salvar");
         jbSalvar.setToolTipText("Salvar Venda");
         jbSalvar.setEnabled(false);
@@ -253,7 +253,7 @@ public class VendasView extends javax.swing.JInternalFrame {
         jLabel8.setText("Desconto:");
 
         jbRemoverProdutos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbRemoverProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Actions18x18/excluir/icons8-lixo-24.png"))); // NOI18N
+        jbRemoverProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-lixo-24.png"))); // NOI18N
         jbRemoverProdutos.setText("Remover Produtos");
         jbRemoverProdutos.setToolTipText("Remover Produtos");
         jbRemoverProdutos.setEnabled(false);
@@ -386,7 +386,7 @@ public class VendasView extends javax.swing.JInternalFrame {
                     .addComponent(jbNovo)
                     .addComponent(jbSalvar)
                     .addComponent(jbRemoverProdutos))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Cadastro", jPanel1);
@@ -400,7 +400,7 @@ public class VendasView extends javax.swing.JInternalFrame {
         jtfPesquisa.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jbPesquisar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Actions18x18/outros/icons8-pesquisar-filled-24.png"))); // NOI18N
+        jbPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-pesquisar-filled-24.png"))); // NOI18N
         jbPesquisar.setText("Pesquisar");
         jbPesquisar.setToolTipText("Pesquisar Venda");
         jbPesquisar.addActionListener(new java.awt.event.ActionListener() {
@@ -430,7 +430,7 @@ public class VendasView extends javax.swing.JInternalFrame {
         jScrollPane2.setViewportView(jtVendas);
 
         jbExcluir.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Actions18x18/excluir/icons8-lixo-24.png"))); // NOI18N
+        jbExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-lixo-24.png"))); // NOI18N
         jbExcluir.setText("Excluir");
         jbExcluir.setToolTipText("Excluir Venda");
         jbExcluir.addActionListener(new java.awt.event.ActionListener() {
@@ -440,7 +440,7 @@ public class VendasView extends javax.swing.JInternalFrame {
         });
 
         jbAlterar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Actions18x18/alterar/icons8-crie-um-novo-24.png"))); // NOI18N
+        jbAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-crie-um-novo-24.png"))); // NOI18N
         jbAlterar.setText("Alterar");
         jbAlterar.setToolTipText("Alterar Venda");
         jbAlterar.addActionListener(new java.awt.event.ActionListener() {
@@ -481,7 +481,7 @@ public class VendasView extends javax.swing.JInternalFrame {
                     .addComponent(jtfPesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbPesquisar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 334, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 337, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAlterar)

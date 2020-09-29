@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package siscon.view;
+package br.com.siscon.view;
 
 /**
  *
@@ -40,7 +35,6 @@ public class AboutView extends javax.swing.JInternalFrame {
         jlNomeUsuario = new javax.swing.JLabel();
         jlArquiteturaSistema = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        uJPanelImagem3 = new componentes.UJPanelImagem();
         jLabel2 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -144,19 +138,6 @@ public class AboutView extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        uJPanelImagem3.setImagem(new java.io.File("/home/joseluiz/NetBeansProjects/SISCON/src/siscon/imagens/others/logo(fundo transparente)2.png"));
-
-        javax.swing.GroupLayout uJPanelImagem3Layout = new javax.swing.GroupLayout(uJPanelImagem3);
-        uJPanelImagem3.setLayout(uJPanelImagem3Layout);
-        uJPanelImagem3Layout.setHorizontalGroup(
-            uJPanelImagem3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 172, Short.MAX_VALUE)
-        );
-        uJPanelImagem3Layout.setVerticalGroup(
-            uJPanelImagem3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 106, Short.MAX_VALUE)
-        );
-
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("build 1.1.0 04/08/2018");
 
@@ -166,21 +147,15 @@ public class AboutView extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(uJPanelImagem3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jLabel2)))
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addContainerGap(92, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(uJPanelImagem3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -226,6 +201,5 @@ public class AboutView extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jlNomeSistema;
     private javax.swing.JLabel jlNomeUsuario;
     private javax.swing.JLabel jlVersaoSistema;
-    private componentes.UJPanelImagem uJPanelImagem3;
     // End of variables declaration//GEN-END:variables
 }

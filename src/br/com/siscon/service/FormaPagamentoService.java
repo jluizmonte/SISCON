@@ -1,7 +1,7 @@
-package siscon.service;
+package br.com.siscon.service;
 
-import siscon.model.FormaPagamentoModel;
-import siscon.model.dao.DAOFormaPagamento;
+import br.com.siscon.model.FormaPagamentoModel;
+import br.com.siscon.model.dao.DAOFormaPagamento;
 import java.util.ArrayList;
 
 /**

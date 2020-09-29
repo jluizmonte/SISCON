@@ -184,7 +184,7 @@
                           <Component id="jbSalvar" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jbRemoverProdutos" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="23" max="32767" attributes="0"/>
+                      <EmptySpace pref="16" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -348,7 +348,7 @@
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/siscon/imagens/Actions18x18/cancelar/icons8-cancelar-2-24.png"/>
+                  <Image iconType="3" name="/br/com/siscon/imagens/buttons/icons8-cancelar-2-24.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cancelar"/>
                 <Property name="toolTipText" type="java.lang.String" value="Cancelar Venda"/>
@@ -364,7 +364,7 @@
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/siscon/imagens/Actions18x18/novo/icons8-adicionar-arquivo-24.png"/>
+                  <Image iconType="3" name="/br/com/siscon/imagens/buttons/icons8-adicionar-arquivo-24.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Novo"/>
                 <Property name="toolTipText" type="java.lang.String" value="Nova Venda"/>
@@ -379,7 +379,7 @@
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/siscon/imagens/Actions18x18/salvar/icons8-salvar-24.png"/>
+                  <Image iconType="3" name="/br/com/siscon/imagens/buttons/icons8-salvar-24.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Salvar"/>
                 <Property name="toolTipText" type="java.lang.String" value="Salvar Venda"/>
@@ -436,7 +436,7 @@
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/siscon/imagens/Actions18x18/excluir/icons8-lixo-24.png"/>
+                  <Image iconType="3" name="/br/com/siscon/imagens/buttons/icons8-lixo-24.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Remover Produtos"/>
                 <Property name="toolTipText" type="java.lang.String" value="Remover Produtos"/>
@@ -523,7 +523,7 @@
                           <Component id="jbPesquisar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jScrollPane2" pref="334" max="32767" attributes="0"/>
+                      <Component id="jScrollPane2" pref="337" max="32767" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jbAlterar" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -559,7 +559,7 @@
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/siscon/imagens/Actions18x18/outros/icons8-pesquisar-filled-24.png"/>
+                  <Image iconType="3" name="/br/com/siscon/imagens/buttons/icons8-pesquisar-filled-24.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
                 <Property name="toolTipText" type="java.lang.String" value="Pesquisar Venda"/>
@@ -619,7 +619,7 @@
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/siscon/imagens/Actions18x18/excluir/icons8-lixo-24.png"/>
+                  <Image iconType="3" name="/br/com/siscon/imagens/buttons/icons8-lixo-24.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Excluir"/>
                 <Property name="toolTipText" type="java.lang.String" value="Excluir Venda"/>
@@ -634,7 +634,7 @@
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/siscon/imagens/Actions18x18/alterar/icons8-crie-um-novo-24.png"/>
+                  <Image iconType="3" name="/br/com/siscon/imagens/buttons/icons8-crie-um-novo-24.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Alterar"/>
                 <Property name="toolTipText" type="java.lang.String" value="Alterar Venda"/>

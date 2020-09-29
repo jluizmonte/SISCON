@@ -1,4 +1,4 @@
-package siscon.view;
+package br.com.siscon.view;
 
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -10,8 +10,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import siscon.model.SessaoUsuarioModel;
-import siscon.relatorios.Reporte;
+import br.com.siscon.model.SessaoUsuarioModel;
+import br.com.siscon.relatorios.Reporte;
 
 /**
  *
@@ -23,7 +23,7 @@ public class PrincipalView extends javax.swing.JFrame {
      * Creates new form Principal
      */
     public PrincipalView() {
-        URL caminhoImagem = this.getClass().getResource("/siscon/icone/principal.png");
+        URL caminhoImagem = this.getClass().getResource("/br/com/siscon/imagens/buttons/principal.png");
         Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(caminhoImagem);
         setIconImage(iconeTitulo);
         setExtendedState(JFrame.MAXIMIZED_BOTH); //seta o tamanho da janela (maximizado) ao iniciar
@@ -73,7 +73,7 @@ public class PrincipalView extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(43, 87, 151));
 
         btnCliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Pessoas18x18/icons8-usuário-38.png"))); // NOI18N
+        btnCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-usuário-38.png"))); // NOI18N
         btnCliente.setText("Cliente");
         btnCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,7 +82,7 @@ public class PrincipalView extends javax.swing.JFrame {
         });
 
         btnFornecedor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnFornecedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Pessoas18x18/icons8-businessman-38.png"))); // NOI18N
+        btnFornecedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-businessman-38.png"))); // NOI18N
         btnFornecedor.setText("Fornecedor");
         btnFornecedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,7 +91,7 @@ public class PrincipalView extends javax.swing.JFrame {
         });
 
         btnProduto.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/gerais/icons8-cardboard-box-38.png"))); // NOI18N
+        btnProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-cardboard-box-38.png"))); // NOI18N
         btnProduto.setText("Produto");
         btnProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,7 +100,7 @@ public class PrincipalView extends javax.swing.JFrame {
         });
 
         btnVenda.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnVenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/gerais/icons8-sales-performance-38.png"))); // NOI18N
+        btnVenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-sales-performance-38.png"))); // NOI18N
         btnVenda.setText("Venda");
         btnVenda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,7 +109,7 @@ public class PrincipalView extends javax.swing.JFrame {
         });
 
         btnRelatorio.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnRelatorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/gerais/icons8-bill-38.png"))); // NOI18N
+        btnRelatorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-bill-38.png"))); // NOI18N
         btnRelatorio.setText("Relatorio");
         btnRelatorio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,7 +118,7 @@ public class PrincipalView extends javax.swing.JFrame {
         });
 
         btnPdv.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnPdv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/gerais/icons8-cash-register-38.png"))); // NOI18N
+        btnPdv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-cash-register-38.png"))); // NOI18N
         btnPdv.setText("PDV");
         btnPdv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,11 +130,12 @@ public class PrincipalView extends javax.swing.JFrame {
 
         jlOperador.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jlOperador.setForeground(new java.awt.Color(255, 255, 255));
-        jlOperador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Pessoas18x18/user.png"))); // NOI18N
+        jlOperador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/user.png"))); // NOI18N
         jlOperador.setText("$Usuario");
 
         jlData.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jlData.setForeground(java.awt.Color.white);
+        jlData.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jlData.setText("Data");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -426,12 +427,12 @@ public class PrincipalView extends javax.swing.JFrame {
         Object[] opcoes = {"PDV1", "PDV2"};
         Object resposta;
         resposta = JOptionPane.showInputDialog(null,
-            "Qual versão do PDV abrir (TESTE)",
-            "Escolha",
-            JOptionPane.OK_CANCEL_OPTION,
-            null,
-            opcoes,
-            "PDV1");
+                "Qual versão do PDV abrir (TESTE)",
+                "Escolha",
+                JOptionPane.OK_CANCEL_OPTION,
+                null,
+                opcoes,
+                "PDV1");
         if (resposta.equals("PDV1")) {
             pdv1View.setVisible(true);
         }
@@ -495,10 +496,22 @@ public class PrincipalView extends javax.swing.JFrame {
         jlOperador.setText(SessaoUsuarioModel.codigoUsuario + "- " + SessaoUsuarioModel.nomeUsuario);
     }
 
-    private void setarData() {
-        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("HH:mm:ss");
-        LocalDateTime timepoint = LocalDateTime.now();
-        jlData.setText(timepoint.format(fmt));
+    /*
+     * exibir na toolbar (barra de status/ barra inferior) a data atual do login
+     * do usuário.
+     */
+    public void setarData() {
+        Thread clock = new Thread() {
+            @Override
+            public void run() {
+                for (;;) {
+                    DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yy HH:mm:ss");
+                    LocalDateTime timepoint = LocalDateTime.now();
+                    jlData.setText(timepoint.format(fmt));
+                }
+            }
+        };
+        clock.start();
     }
 
     protected void setBackgroundImage() {

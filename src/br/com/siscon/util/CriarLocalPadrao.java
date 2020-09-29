@@ -1,4 +1,4 @@
-package siscon.util;
+package br.com.siscon.util;
 
 import java.io.*;
 

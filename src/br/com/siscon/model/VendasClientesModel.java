@@ -1,4 +1,4 @@
-package siscon.model;
+package br.com.siscon.model;
 
 import java.util.ArrayList;
 

@@ -1,10 +1,10 @@
-package siscon.view;
+package br.com.siscon.view;
 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import siscon.model.UsuarioModel;
-import siscon.service.UsuarioService;
+import br.com.siscon.model.UsuarioModel;
+import br.com.siscon.service.UsuarioService;
 
 /**
  *
@@ -101,7 +101,7 @@ public class UsuarioView extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(jtUsuario);
 
         jbCancelar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Actions18x18/cancelar/icons8-cancelar-2-24.png"))); // NOI18N
+        jbCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-cancelar-2-24.png"))); // NOI18N
         jbCancelar.setText("Cancelar");
         jbCancelar.setToolTipText("Cancelar Usuário");
         jbCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -111,7 +111,7 @@ public class UsuarioView extends javax.swing.JInternalFrame {
         });
 
         jbExcluir.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Actions18x18/excluir/icons8-lixo-24.png"))); // NOI18N
+        jbExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-lixo-24.png"))); // NOI18N
         jbExcluir.setText("Excluir");
         jbExcluir.setToolTipText("Excluir Usuário");
         jbExcluir.addActionListener(new java.awt.event.ActionListener() {
@@ -121,7 +121,7 @@ public class UsuarioView extends javax.swing.JInternalFrame {
         });
 
         jbAlterar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Actions18x18/alterar/icons8-crie-um-novo-24.png"))); // NOI18N
+        jbAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-crie-um-novo-24.png"))); // NOI18N
         jbAlterar.setText("Alterar");
         jbAlterar.setToolTipText("Alterar Usuário");
         jbAlterar.addActionListener(new java.awt.event.ActionListener() {
@@ -131,7 +131,7 @@ public class UsuarioView extends javax.swing.JInternalFrame {
         });
 
         jbSalvar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Actions18x18/salvar/icons8-salvar-24.png"))); // NOI18N
+        jbSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-salvar-24.png"))); // NOI18N
         jbSalvar.setText("Salvar");
         jbSalvar.setToolTipText("Salvar Usuário");
         jbSalvar.addActionListener(new java.awt.event.ActionListener() {
@@ -141,7 +141,7 @@ public class UsuarioView extends javax.swing.JInternalFrame {
         });
 
         jbNovo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Actions18x18/novo/icons8-adicionar-arquivo-24.png"))); // NOI18N
+        jbNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-adicionar-arquivo-24.png"))); // NOI18N
         jbNovo.setText("Novo");
         jbNovo.setToolTipText("Novo Usuário");
         jbNovo.addActionListener(new java.awt.event.ActionListener() {
@@ -160,33 +160,32 @@ public class UsuarioView extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jbCancelar)
-                            .addGap(2, 2, 2)
-                            .addComponent(jbExcluir)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jbNovo)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jbAlterar)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jbSalvar))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jtfCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel1))
-                            .addGap(9, 9, 9)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel2)
-                                .addComponent(jtfNome)))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jtfLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel3))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel4)
-                                .addComponent(jtfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jbCancelar)
+                        .addGap(2, 2, 2)
+                        .addComponent(jbExcluir)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbNovo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbAlterar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbSalvar))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtfCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1))
+                        .addGap(9, 9, 9)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jtfNome)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtfLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jtfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -217,7 +216,7 @@ public class UsuarioView extends javax.swing.JInternalFrame {
                     .addComponent(jbAlterar)
                     .addComponent(jbSalvar)
                     .addComponent(jbNovo))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -330,7 +329,7 @@ public class UsuarioView extends javax.swing.JInternalFrame {
          * exibidos na tabela
          */
         listaModelUsuarios = usuarioService.getListaUsuarioDAO();
-       DefaultTableModel  modelo = (DefaultTableModel) jtUsuario.getModel();
+        DefaultTableModel modelo = (DefaultTableModel) jtUsuario.getModel();
         modelo.setNumRows(0);
 
         // insere os clientes na tabela

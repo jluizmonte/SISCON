@@ -1,4 +1,4 @@
-package siscon.view;
+package br.com.siscon.view;
 
 import java.awt.Color;
 import java.awt.Toolkit;
@@ -12,19 +12,19 @@ import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import siscon.model.ClienteModel;
-import siscon.model.ProdutoModel;
-import siscon.model.SessaoUsuarioModel;
-import siscon.model.UsuarioModel;
-import siscon.model.VendasModel;
-import siscon.model.VendasProdutosModel;
-import siscon.service.ClienteService;
-import siscon.service.ProdutoService;
-import siscon.service.UsuarioService;
-import siscon.service.VendasProdutosService;
-import siscon.service.VendasService;
-import siscon.util.Datas;
-import siscon.util.Mascaras;
+import br.com.siscon.model.ClienteModel;
+import br.com.siscon.model.ProdutoModel;
+import br.com.siscon.model.SessaoUsuarioModel;
+import br.com.siscon.model.UsuarioModel;
+import br.com.siscon.model.VendasModel;
+import br.com.siscon.model.VendasProdutosModel;
+import br.com.siscon.service.ClienteService;
+import br.com.siscon.service.ProdutoService;
+import br.com.siscon.service.UsuarioService;
+import br.com.siscon.service.VendasProdutosService;
+import br.com.siscon.service.VendasService;
+import br.com.siscon.util.Datas;
+import br.com.siscon.util.Mascaras;
 
 /**
  *
@@ -55,15 +55,15 @@ public class Pdv1View extends javax.swing.JFrame {
     SessaoUsuarioModel sessaoUsuarioModel = new SessaoUsuarioModel();
     int quantidade;
     String produtoPesquisado;
-    Datas blDatas = new Datas();
-    Mascaras bLMascaras = new Mascaras();
+    Datas datas = new Datas();
+    Mascaras mascaras = new Mascaras();
     private PagamentoPdvView viewPagamentoPDV;
 
     /**
      * Creates new form NewJFrame
      */
     public Pdv1View() {
-        URL caminhoImagem = this.getClass().getResource("/siscon/icone/pdv.png");
+        URL caminhoImagem = this.getClass().getResource("/br/com/siscon/imagens/buttons/pdv.png");
         Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(caminhoImagem);
         setIconImage(iconeTitulo);
         setExtendedState(JFrame.MAXIMIZED_BOTH); //seta o tamanho da janela (maximizado) ao iniciar
@@ -109,7 +109,7 @@ public class Pdv1View extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jtProdutos = new javax.swing.JTable();
         jtfCodigo = new javax.swing.JFormattedTextField();
-        uJPanelImagem2 = new componentes.UJPanelImagem();
+        rSPanelImage1 = new rojerusan.RSPanelImage();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jmiSair = new javax.swing.JMenuItem();
@@ -123,6 +123,8 @@ public class Pdv1View extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("PDV");
+
+        jPanel1.setBackground(new java.awt.Color(0, 179, 227));
 
         panel6.setBackground(new java.awt.Color(45, 137, 239));
 
@@ -312,30 +314,29 @@ public class Pdv1View extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jtfCodigo)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 872, Short.MAX_VALUE)))
+                    .addComponent(jtfCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, 872, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1)))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 424, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jtfCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        uJPanelImagem2.setImagem(new java.io.File("/home/joseluiz/NetBeansProjects/SISCON/src/siscon/imagens/others/logo(fundo transparente)2.png"));
-        uJPanelImagem2.setOpaque(true);
+        rSPanelImage1.setImagen(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/others/logo(fundo transparente)2.png"))); // NOI18N
 
-        javax.swing.GroupLayout uJPanelImagem2Layout = new javax.swing.GroupLayout(uJPanelImagem2);
-        uJPanelImagem2.setLayout(uJPanelImagem2Layout);
-        uJPanelImagem2Layout.setHorizontalGroup(
-            uJPanelImagem2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 254, Short.MAX_VALUE)
+        javax.swing.GroupLayout rSPanelImage1Layout = new javax.swing.GroupLayout(rSPanelImage1);
+        rSPanelImage1.setLayout(rSPanelImage1Layout);
+        rSPanelImage1Layout.setHorizontalGroup(
+            rSPanelImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 316, Short.MAX_VALUE)
         );
-        uJPanelImagem2Layout.setVerticalGroup(
-            uJPanelImagem2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 85, Short.MAX_VALUE)
+        rSPanelImage1Layout.setVerticalGroup(
+            rSPanelImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 96, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -345,19 +346,21 @@ public class Pdv1View extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(uJPanelImagem2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(rSPanelImage1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(panel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(uJPanelImagem2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(33, 33, 33)
+                .addComponent(rSPanelImage1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -549,7 +552,7 @@ public class Pdv1View extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Metal".equals(info.getName())) {
+                if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -714,6 +717,6 @@ public class Pdv1View extends javax.swing.JFrame {
     private java.awt.Panel panel1;
     private java.awt.Panel panel2;
     private java.awt.Panel panel6;
-    private componentes.UJPanelImagem uJPanelImagem2;
+    private rojerusan.RSPanelImage rSPanelImage1;
     // End of variables declaration//GEN-END:variables
 }

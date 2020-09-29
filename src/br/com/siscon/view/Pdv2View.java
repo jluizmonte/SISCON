@@ -1,4 +1,4 @@
-package siscon.view;
+package br.com.siscon.view;
 
 import java.awt.Color;
 import java.awt.Image;
@@ -12,19 +12,19 @@ import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import siscon.model.ClienteModel;
-import siscon.model.ProdutoModel;
-import siscon.model.SessaoUsuarioModel;
-import siscon.model.UsuarioModel;
-import siscon.model.VendasModel;
-import siscon.model.VendasProdutosModel;
-import siscon.service.ClienteService;
-import siscon.service.ProdutoService;
-import siscon.service.UsuarioService;
-import siscon.service.VendasProdutosService;
-import siscon.service.VendasService;
-import siscon.util.Datas;
-import siscon.util.Mascaras;
+import br.com.siscon.model.ClienteModel;
+import br.com.siscon.model.ProdutoModel;
+import br.com.siscon.model.SessaoUsuarioModel;
+import br.com.siscon.model.UsuarioModel;
+import br.com.siscon.model.VendasModel;
+import br.com.siscon.model.VendasProdutosModel;
+import br.com.siscon.service.ClienteService;
+import br.com.siscon.service.ProdutoService;
+import br.com.siscon.service.UsuarioService;
+import br.com.siscon.service.VendasProdutosService;
+import br.com.siscon.service.VendasService;
+import br.com.siscon.util.Datas;
+import br.com.siscon.util.Mascaras;
 
 /**
  *
@@ -56,15 +56,15 @@ public class Pdv2View extends javax.swing.JFrame {
     int quantidade;
     int codigo;
     String produtoPesquisado;
-    Datas blDatas = new Datas();
-    Mascaras bLMascaras = new Mascaras();
+    Datas datas = new Datas();
+    Mascaras mascaras = new Mascaras();
     private PagamentoPdvView viewPagamentoPDV;
 
     /**
      * Creates new form PDV
      */
     public Pdv2View() {
-        URL caminhoImagem = this.getClass().getResource("/siscon/icone/pdv.png");
+        URL caminhoImagem = this.getClass().getResource("/br/com/siscon/imagens/buttons/pdv.png");
         Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(caminhoImagem);
         setIconImage(iconeTitulo);
         setExtendedState(JFrame.MAXIMIZED_BOTH); //seta o tamanho da janela (maximizado) ao iniciar

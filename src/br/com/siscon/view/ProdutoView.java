@@ -1,14 +1,14 @@
-package siscon.view;
+package br.com.siscon.view;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import siscon.model.ProdutoModel;
-import siscon.service.ProdutoService;
-import siscon.util.Datas;
-import siscon.util.Formatador;
+import br.com.siscon.model.ProdutoModel;
+import br.com.siscon.service.ProdutoService;
+import br.com.siscon.util.Datas;
+import br.com.siscon.util.Formatador;
 
 /**
  *
@@ -114,7 +114,7 @@ public class ProdutoView extends javax.swing.JInternalFrame {
         jLabel7.setText("Observações Gerais:");
 
         jbCancelar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Actions18x18/cancelar/icons8-cancelar-2-24.png"))); // NOI18N
+        jbCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-cancelar-2-24.png"))); // NOI18N
         jbCancelar.setText("Cancelar");
         jbCancelar.setToolTipText("Cancelar Cliente");
         jbCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -124,7 +124,7 @@ public class ProdutoView extends javax.swing.JInternalFrame {
         });
 
         jbNovo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Actions18x18/novo/icons8-adicionar-arquivo-24.png"))); // NOI18N
+        jbNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-adicionar-arquivo-24.png"))); // NOI18N
         jbNovo.setText("Novo");
         jbNovo.setToolTipText("Novo Cliente");
         jbNovo.addActionListener(new java.awt.event.ActionListener() {
@@ -134,7 +134,7 @@ public class ProdutoView extends javax.swing.JInternalFrame {
         });
 
         jbSalvar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Actions18x18/salvar/icons8-salvar-24.png"))); // NOI18N
+        jbSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-salvar-24.png"))); // NOI18N
         jbSalvar.setText("Salvar");
         jbSalvar.setToolTipText("Salvar Cliente");
         jbSalvar.addActionListener(new java.awt.event.ActionListener() {
@@ -144,7 +144,7 @@ public class ProdutoView extends javax.swing.JInternalFrame {
         });
 
         jbAlterar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Actions18x18/alterar/icons8-crie-um-novo-24.png"))); // NOI18N
+        jbAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-crie-um-novo-24.png"))); // NOI18N
         jbAlterar.setText("Alterar");
         jbAlterar.setToolTipText("Alterar Cliente");
         jbAlterar.addActionListener(new java.awt.event.ActionListener() {
@@ -154,7 +154,7 @@ public class ProdutoView extends javax.swing.JInternalFrame {
         });
 
         jbExcluir.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Actions18x18/excluir/icons8-lixo-24.png"))); // NOI18N
+        jbExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-lixo-24.png"))); // NOI18N
         jbExcluir.setText("Excluir");
         jbExcluir.setToolTipText("Excluir Cliente");
         jbExcluir.addActionListener(new java.awt.event.ActionListener() {
@@ -252,7 +252,7 @@ public class ProdutoView extends javax.swing.JInternalFrame {
                 .addComponent(jbAlterar)
                 .addGap(18, 18, 18)
                 .addComponent(jbSalvar)
-                .addGap(0, 12, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

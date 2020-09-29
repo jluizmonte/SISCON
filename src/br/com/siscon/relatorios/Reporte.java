@@ -1,4 +1,4 @@
-package siscon.relatorios;
+package br.com.siscon.relatorios;
 
 import java.awt.HeadlessException;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.swing.JRViewer;
-import siscon.connection.ConexaoMySql;
+import br.com.siscon.connection.ConexaoMySql;
 
 public class Reporte extends ConexaoMySql {
 

@@ -1,13 +1,13 @@
-package siscon.view;
+package br.com.siscon.view;
 
-import siscon.service.FormaPagamentoService;
+import br.com.siscon.service.FormaPagamentoService;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import java.net.URL;
 import java.awt.Image;
 import java.awt.Toolkit;
-import siscon.model.FormaPagamentoModel;
-import siscon.util.Mascaras;
+import br.com.siscon.model.FormaPagamentoModel;
+import br.com.siscon.util.Mascaras;
 
 /**
  *
@@ -26,7 +26,7 @@ public class PagamentoPdvView extends javax.swing.JDialog {
     private String parcelasPagamento; // quantidade de parcelas
     private boolean finalizarVenda;
     private int parcelas;
-    Mascaras bLMascaras = new Mascaras();
+    Mascaras mascaras = new Mascaras();
 
     /**
      * Creates new form ViewPagamentoPDV
@@ -36,7 +36,7 @@ public class PagamentoPdvView extends javax.swing.JDialog {
      */
     public PagamentoPdvView(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
-        URL caminhoImagem = this.getClass().getResource("/siscon/icone/pdv.png");
+        URL caminhoImagem = this.getClass().getResource("/br/com/siscon/imagens/buttons/pdv.png");
         Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(caminhoImagem);
         setIconImage(iconeTitulo);
         initComponents();
@@ -261,12 +261,12 @@ public class PagamentoPdvView extends javax.swing.JDialog {
     }//GEN-LAST:event_jbOkActionPerformed
 
     private void jtfDescontoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfDescontoFocusLost
-        jtfDesconto.setText(bLMascaras.converterVirgulaParaPonto(jtfDesconto.getText()));
+        jtfDesconto.setText(mascaras.converterVirgulaParaPonto(jtfDesconto.getText()));
         calcularPagamento();
     }//GEN-LAST:event_jtfDescontoFocusLost
 
     private void jtfValorRecebidoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfValorRecebidoFocusLost
-        jtfValorRecebido.setText(bLMascaras.converterVirgulaParaPonto(jtfValorRecebido.getText()));
+        jtfValorRecebido.setText(mascaras.converterVirgulaParaPonto(jtfValorRecebido.getText()));
         calcularPagamento();
         calcularTroco();
     }//GEN-LAST:event_jtfValorRecebidoFocusLost
@@ -376,10 +376,10 @@ public class PagamentoPdvView extends javax.swing.JDialog {
         if ("CARTÃO".equals(jtfFormaPagamento.getText())) {
             setParcelas(Integer.parseInt(jtfParcelas.getText()));
             pagar = (subTotal - desconto) / getParcelas();
-            jlValorTotal.setText(bLMascaras.arredondamentoComPontoDuasCasasString(pagar));
+            jlValorTotal.setText(mascaras.arredondamentoComPontoDuasCasasString(pagar));
         } else {
             pagar = subTotal - desconto;
-            jlValorTotal.setText(bLMascaras.arredondamentoComPontoDuasCasasString(pagar));
+            jlValorTotal.setText(mascaras.arredondamentoComPontoDuasCasasString(pagar));
         }
     }
 
@@ -405,11 +405,11 @@ public class PagamentoPdvView extends javax.swing.JDialog {
         }
         //calcular o valor a pagar
         pagar = subTotal - desconto;
-        jlValorTotal.setText(bLMascaras.arredondamentoComPontoDuasCasasString(pagar));
+        jlValorTotal.setText(mascaras.arredondamentoComPontoDuasCasasString(pagar));
 
         //calcula o troco
         troco = recebido - pagar;
-        jtfTroco.setText(bLMascaras.arredondamentoComPontoDuasCasasString(troco));
+        jtfTroco.setText(mascaras.arredondamentoComPontoDuasCasasString(troco));
     }
 
     private void salvarVenda() {

@@ -1,7 +1,7 @@
-package siscon.model.dao;
+package br.com.siscon.model.dao;
 
 import java.util.ArrayList;
-import siscon.model.FornecedorModel;
+import br.com.siscon.model.FornecedorModel;
 
 /**
  *

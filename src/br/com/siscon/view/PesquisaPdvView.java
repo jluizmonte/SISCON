@@ -1,4 +1,4 @@
-package siscon.view;
+package br.com.siscon.view;
 
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -9,12 +9,12 @@ import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
-import siscon.model.ProdutoModel;
-import siscon.service.ProdutoService;
+import br.com.siscon.model.ProdutoModel;
+import br.com.siscon.service.ProdutoService;
 
 /**
  *
- * @author Jose Luiz
+ * @author jluiz
  */
 public class PesquisaPdvView extends javax.swing.JDialog {
 
@@ -30,7 +30,7 @@ public class PesquisaPdvView extends javax.swing.JDialog {
      */
     public PesquisaPdvView(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
-        URL caminhoImagem = this.getClass().getResource("/icone/pesquisa.png");
+        URL caminhoImagem = this.getClass().getResource("/br/com/siscon/imagens/buttons/pesquisa.png");
         Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(caminhoImagem);
         setIconImage(iconeTitulo);
         initComponents();
