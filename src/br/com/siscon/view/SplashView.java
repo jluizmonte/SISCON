@@ -23,6 +23,7 @@ public class SplashView extends javax.swing.JFrame {
         rSPanelImage1 = new rojerusan.RSPanelImage();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("SISCON");
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(0, 179, 227));
