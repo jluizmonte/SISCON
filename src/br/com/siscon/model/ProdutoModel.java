@@ -8,12 +8,18 @@ public class ProdutoModel {
 
     private int proCodigoProduto;
     private String proDescricao;
-    private Double proValorTotal;
-    private int proQuantidadeEstoque;
-    private Double proValorUnitario;
+    private Double proValor;
     private String proObservacao;
-    private String proCodigoBarras;
     private String proDataEntrada;
+    private int qtdeProdutos;
+
+    public int getProCodigoProduto() {
+        return proCodigoProduto;
+    }
+
+    public void setProCodigoProduto(int proCodigoProduto) {
+        this.proCodigoProduto = proCodigoProduto;
+    }
 
     public String getProDescricao() {
         return proDescricao;
@@ -23,28 +29,12 @@ public class ProdutoModel {
         this.proDescricao = proDescricao;
     }
 
-    public Double getProValorTotal() {
-        return proValorTotal;
+    public Double getProValor() {
+        return proValor;
     }
 
-    public void setProValorTotal(Double proValorTotal) {
-        this.proValorTotal = proValorTotal;
-    }
-
-    public int getProQuantidadeEstoque() {
-        return proQuantidadeEstoque;
-    }
-
-    public void setProQuantidadeEstoque(int proQuantidadeEstoque) {
-        this.proQuantidadeEstoque = proQuantidadeEstoque;
-    }
-
-    public Double getProValorUnitario() {
-        return proValorUnitario;
-    }
-
-    public void setProValorUnitario(Double proValorUnitario) {
-        this.proValorUnitario = proValorUnitario;
+    public void setProValor(Double proValor) {
+        this.proValor = proValor;
     }
 
     public String getProObservacao() {
@@ -55,22 +45,6 @@ public class ProdutoModel {
         this.proObservacao = proObservacao;
     }
 
-    public int getProCodigoProduto() {
-        return proCodigoProduto;
-    }
-
-    public void setProCodigoProduto(int proCodigoProduto) {
-        this.proCodigoProduto = proCodigoProduto;
-    }
-
-    public String getProCodigoBarras() {
-        return proCodigoBarras;
-    }
-
-    public void setProCodigoBarras(String proCodigoBarras) {
-        this.proCodigoBarras = proCodigoBarras;
-    }
-
     public String getProDataEntrada() {
         return proDataEntrada;
     }
@@ -79,9 +53,16 @@ public class ProdutoModel {
         this.proDataEntrada = proDataEntrada;
     }
 
-    @Override
-    public String toString() {
-        return "ProdutoModel{" + "proDescricao=" + proDescricao + ", proValorTotal=" + proValorTotal + ", proQuantidadeEstoque=" + proQuantidadeEstoque + ", proValorUnitario=" + proValorUnitario + ", proObservacao=" + proObservacao + ", proCodigoProduto=" + proCodigoProduto + ", proCodigoBarras=" + proCodigoBarras + ", proDataEntrada=" + proDataEntrada + '}';
+    public int getQtdeProdutos() {
+        return qtdeProdutos;
     }
 
+    public void setQtdeProdutos(int qtdeProdutos) {
+        this.qtdeProdutos = qtdeProdutos;
+    }
+
+    @Override
+    public String toString() {
+        return "ProdutoModel{" + "proCodigoProduto=" + proCodigoProduto + ", proDescricao=" + proDescricao + ", proValor=" + proValor + ", proObservacao=" + proObservacao + ", proDataEntrada=" + proDataEntrada + ", qtdeProdutos=" + qtdeProdutos + '}';
+    }
 }

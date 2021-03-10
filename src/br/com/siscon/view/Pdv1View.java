@@ -110,6 +110,7 @@ public class Pdv1View extends javax.swing.JFrame {
         jtProdutos = new javax.swing.JTable();
         jtfCodigo = new javax.swing.JFormattedTextField();
         rSPanelImage1 = new rojerusan.RSPanelImage();
+        rSLabelCircleImage1 = new rojerusan.RSLabelCircleImage();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jmiSair = new javax.swing.JMenuItem();
@@ -320,7 +321,7 @@ public class Pdv1View extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 424, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 409, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jtfCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -339,6 +340,8 @@ public class Pdv1View extends javax.swing.JFrame {
             .addGap(0, 96, Short.MAX_VALUE)
         );
 
+        rSLabelCircleImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/logo.jpeg"))); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -346,21 +349,26 @@ public class Pdv1View extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(14, 14, 14)
                         .addComponent(rSPanelImage1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(rSLabelCircleImage1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(rSPanelImage1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(rSPanelImage1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(rSLabelCircleImage1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -541,69 +549,30 @@ public class Pdv1View extends javax.swing.JFrame {
         viewPausaPDV.setModal(true);
     }//GEN-LAST:event_jmiFecharCaixaActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Pdv1View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> {
-            new Pdv1View().setVisible(true);
-        });
-    }
-
     private void pegarConteudo(java.awt.event.KeyEvent evt) {
-        jlStatus.setText("Ocupado");
-        jlStatus.setForeground(Color.red);
-        DefaultTableModel modelo = (DefaultTableModel) jtProdutos.getModel();
-        if (evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER) {
-            try {
-                produtoModel = produtoService.getProdutoDAO(Integer.parseInt(jtfCodigo.getText()));
-                modelo.addRow(new Object[]{
-                    modelo.getRowCount() + 1,
-                    produtoModel.getProCodigoProduto(),
-                    produtoModel.getProDescricao(),
-                    quantidade,
-                    produtoModel.getProValorUnitario(),
-                    produtoModel.getProValorUnitario() * quantidade
-                });
-                jtfValorBruto.setText(String.valueOf(somaValorTotal()));
-                jtfCodigo.setText("");
-                quantidade = 1;
-            } catch (NumberFormatException e) {
-                //JOptionPane.showMessageDialog(this, "Informe neste campo apenas números", "Erro", JOptionPane.ERROR_MESSAGE);
-                jtfCodigo.setText("");
-            }
-
-        }
+//        jlStatus.setText("Ocupado");
+//        jlStatus.setForeground(Color.red);
+//        DefaultTableModel modelo = (DefaultTableModel) jtProdutos.getModel();
+//        if (evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER) {
+//            try {
+//                produtoModel = produtoService.getProdutoDAO(Integer.parseInt(jtfCodigo.getText()));
+//                modelo.addRow(new Object[]{
+//                    modelo.getRowCount() + 1,
+//                    produtoModel.getProCodigoProduto(),
+//                    produtoModel.getProDescricao(),
+//                    quantidade,
+//                    produtoModel.getProValorUnitario(),
+//                    produtoModel.getProValorUnitario() * quantidade
+//                });
+//                jtfValorBruto.setText(String.valueOf(somaValorTotal()));
+//                jtfCodigo.setText("");
+//                quantidade = 1;
+//            } catch (NumberFormatException e) {
+//                //JOptionPane.showMessageDialog(this, "Informe neste campo apenas números", "Erro", JOptionPane.ERROR_MESSAGE);
+//                jtfCodigo.setText("");
+//            }
+//
+//        }
     }
 
     private float somaValorTotal() {
@@ -621,57 +590,57 @@ public class Pdv1View extends javax.swing.JFrame {
     }
 
     private void salvarVenda() {
-        int cont = 0;
-        int codigoProduto = 0;
-        int codigoVenda = 0;
-
-        vendasModel = new VendasModel();
-        vendasModel.setCliente(1);
-        try {
-            DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyy");
-            LocalDateTime timepoint = LocalDateTime.now();
-            vendasModel.setVenDataVenda(timepoint.format(fmt));
-        } catch (Exception ex) {
-            Logger.getLogger(Pdv1View.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        vendasModel.setVenValorBruto(Double.parseDouble(jtfValorBruto.getText()));
-        /*
-         provavel criação de frame para desconto. Alterar de 0 para a nova regra de negocio
-         */
-        vendasModel.setVenDesconto(viewPagamentoPDV.getDesconto());
-        /**
-         * se um frame novo for criado para o desconto, aqui ficara esse
-         * jtfValorTotal - desconto
-         */
-        vendasModel.setVenValorLiquido(viewPagamentoPDV.getValorTotal());
-        vendasModel.setVenFormaPagamento(viewPagamentoPDV.getPagamento());
-        vendasModel.setVenParcelas(viewPagamentoPDV.getParcelasPagamento());
-        codigoVenda = vendasService.salvarVendasDAO(vendasModel);
-
-        cont = jtProdutos.getRowCount();
-        for (int i = 0; i < cont; i++) {
-            produtoModel = new ProdutoModel();
-            vendasProdutosModel = new VendasProdutosModel();
-            codigoProduto = (int) jtProdutos.getValueAt(i, 1);
-            vendasProdutosModel = new VendasProdutosModel();
-            produtoModel = new ProdutoModel();
-            vendasProdutosModel.setProduto(codigoProduto);
-            vendasProdutosModel.setVendas(codigoVenda);
-            vendasProdutosModel.setVendasProValor((double) jtProdutos.getValueAt(i, 4));
-            vendasProdutosModel.setVenProQuantidade(Integer.parseInt(jtProdutos.getValueAt(i, 3).toString()));
-
-            //produto
-            produtoModel.setProCodigoProduto(codigoProduto);
-            produtoModel.setProQuantidadeEstoque(produtoService.getProdutoDAO(codigoProduto).getProQuantidadeEstoque() - Integer.parseInt(jtProdutos.getValueAt(i, 3).toString()));
-            listaVendasProdutosModel.add(vendasProdutosModel);
-            listaProdutoModel.add(produtoModel);
-        }
-        if (vendasProdutosService.salvarVendasProdutosDAO(listaVendasProdutosModel)) {
-            produtoService.alterarEstoqueProdutosDAO(listaProdutoModel);
-            limparCampos();
-        } else {
-            JOptionPane.showMessageDialog(this, "Erro ao salvar os produtos da venda!", "Erro", JOptionPane.ERROR_MESSAGE);
-        }
+//        int cont = 0;
+//        int codigoProduto = 0;
+//        int codigoVenda = 0;
+//
+//        vendasModel = new VendasModel();
+//        vendasModel.setCliente(1);
+//        try {
+//            DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyy");
+//            LocalDateTime timepoint = LocalDateTime.now();
+//            vendasModel.setVenDataVenda(timepoint.format(fmt));
+//        } catch (Exception ex) {
+//            Logger.getLogger(Pdv1View.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        vendasModel.setVenValorBruto(Double.parseDouble(jtfValorBruto.getText()));
+//        /*
+//         provavel criação de frame para desconto. Alterar de 0 para a nova regra de negocio
+//         */
+//        vendasModel.setVenDesconto(viewPagamentoPDV.getDesconto());
+//        /**
+//         * se um frame novo for criado para o desconto, aqui ficara esse
+//         * jtfValorTotal - desconto
+//         */
+//        vendasModel.setVenValorLiquido(viewPagamentoPDV.getValorTotal());
+//        vendasModel.setVenFormaPagamento(viewPagamentoPDV.getPagamento());
+//        vendasModel.setVenParcelas(viewPagamentoPDV.getParcelasPagamento());
+//        codigoVenda = vendasService.salvarVendasDAO(vendasModel);
+//
+//        cont = jtProdutos.getRowCount();
+//        for (int i = 0; i < cont; i++) {
+//            produtoModel = new ProdutoModel();
+//            vendasProdutosModel = new VendasProdutosModel();
+//            codigoProduto = (int) jtProdutos.getValueAt(i, 1);
+//            vendasProdutosModel = new VendasProdutosModel();
+//            produtoModel = new ProdutoModel();
+//            vendasProdutosModel.setProduto(codigoProduto);
+//            vendasProdutosModel.setVendas(codigoVenda);
+//            vendasProdutosModel.setVendasProValor((double) jtProdutos.getValueAt(i, 4));
+//            vendasProdutosModel.setVenProQuantidade(Integer.parseInt(jtProdutos.getValueAt(i, 3).toString()));
+//
+//            //produto
+//            produtoModel.setProCodigoProduto(codigoProduto);
+//            produtoModel.setProQuantidadeEstoque(produtoService.getProdutoDAO(codigoProduto).getProQuantidadeEstoque() - Integer.parseInt(jtProdutos.getValueAt(i, 3).toString()));
+//            listaVendasProdutosModel.add(vendasProdutosModel);
+//            listaProdutoModel.add(produtoModel);
+//        }
+//        if (vendasProdutosService.salvarVendasProdutosDAO(listaVendasProdutosModel)) {
+//            produtoService.alterarEstoqueProdutosDAO(listaProdutoModel);
+//            limparCampos();
+//        } else {
+//            JOptionPane.showMessageDialog(this, "Erro ao salvar os produtos da venda!", "Erro", JOptionPane.ERROR_MESSAGE);
+//        }
     }
 
     private void limparCampos() {
@@ -717,6 +686,7 @@ public class Pdv1View extends javax.swing.JFrame {
     private java.awt.Panel panel1;
     private java.awt.Panel panel2;
     private java.awt.Panel panel6;
+    private rojerusan.RSLabelCircleImage rSLabelCircleImage1;
     private rojerusan.RSPanelImage rSPanelImage1;
     // End of variables declaration//GEN-END:variables
 }

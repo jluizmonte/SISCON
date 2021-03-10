@@ -23,14 +23,11 @@ public class ProdutosVendasProdutosDao extends ConexaoMySql implements IProdutos
         try {
             this.conectar();
             this.executarSQL("SELECT "
-                    + " tbl_produto.pk_id_produto,"
-                    + " tbl_produto.pro_estoque,"
-                    + " tbl_produto.pro_nome,"
+                    + " tbl_produto.pro_codigo_produto,"
                     + " tbl_produto.pro_descricao,"
                     + " tbl_produto.pro_valor,"
-                    + " tbl_produto.pro_valor_venda,"
-                    + " tbl_produto.pro_valor_unitario,"
-                    + " tbl_produto.pro_marca,"
+                    + " tbl_produto.pro_data_enrtada,"
+                    + " tbl_produto.pro_observacao,"
                     + " tbl_vendas_produtos.fk_produto,"
                     + " tbl_vendas_produtos.fk_vendas,"
                     + " tbl_vendas_produtos.pk_id_venda_produto,"
@@ -46,14 +43,11 @@ public class ProdutosVendasProdutosDao extends ConexaoMySql implements IProdutos
                 produtoModel = new ProdutoModel();
                 modelVendasProdutos = new VendasProdutosModel();
 
-                produtoModel.setProCodigoProduto(this.getResultSet().getInt(1));
+               produtoModel.setProCodigoProduto(this.getResultSet().getInt(1));
                 produtoModel.setProDescricao(this.getResultSet().getString(2));
-                produtoModel.setProObservacao(this.getResultSet().getString(3));
-                produtoModel.setProQuantidadeEstoque(this.getResultSet().getInt(4));
-                produtoModel.setProValorTotal(this.getResultSet().getDouble(5));
-                produtoModel.setProValorUnitario(this.getResultSet().getDouble(6));
-                produtoModel.setProCodigoBarras(this.getResultSet().getString(7));
-                produtoModel.setProDataEntrada(this.getResultSet().getString(8));
+                produtoModel.setProValor(this.getResultSet().getDouble(3));
+                produtoModel.setProDataEntrada(this.getResultSet().getString(4));
+                produtoModel.setProObservacao(this.getResultSet().getString(5));
 
                 modelVendasProdutos.setProduto(this.getResultSet().getInt(9));
                 modelVendasProdutos.setVendas(this.getResultSet().getInt(10));

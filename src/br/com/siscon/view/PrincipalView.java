@@ -12,6 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import br.com.siscon.model.SessaoUsuarioModel;
 import br.com.siscon.relatorios.Reporte;
+import java.awt.Graphics;
 
 /**
  *
@@ -23,7 +24,7 @@ public class PrincipalView extends javax.swing.JFrame {
      * Creates new form Principal
      */
     public PrincipalView() {
-        URL caminhoImagem = this.getClass().getResource("/br/com/siscon/imagens/buttons/principal.png");
+        URL caminhoImagem = this.getClass().getResource("/br/com/siscon/imagens/logo.jpeg");
         Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(caminhoImagem);
         setIconImage(iconeTitulo);
         setExtendedState(JFrame.MAXIMIZED_BOTH); //seta o tamanho da janela (maximizado) ao iniciar
@@ -66,7 +67,7 @@ public class PrincipalView extends javax.swing.JFrame {
         jmiAbout = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("VendasNSoft 2.0");
+        setTitle("SISCON");
 
         desktopPane.setBackground(new java.awt.Color(76, 106, 146));
 
@@ -133,7 +134,7 @@ public class PrincipalView extends javax.swing.JFrame {
         jlOperador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/user.png"))); // NOI18N
         jlOperador.setText("$Usuario");
 
-        jlData.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jlData.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jlData.setForeground(java.awt.Color.white);
         jlData.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jlData.setText("Data");
@@ -186,7 +187,15 @@ public class PrincipalView extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        painelInterno.setBackground(new java.awt.Color(76, 106, 146));
+        ImageIcon icon = new ImageIcon(getClass().getResource("/br/com/siscon/imagens/background.png"));
+        Image image = icon.getImage();
+        painelInterno = new javax.swing.JDesktopPane() {
+            @Override
+            public void paintComponent(Graphics g) {
+                g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
+            }
+        };
+        painelInterno.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout painelInternoLayout = new javax.swing.GroupLayout(painelInterno);
         painelInterno.setLayout(painelInternoLayout);
@@ -368,7 +377,6 @@ public class PrincipalView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jmiSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiSairActionPerformed
-        // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jmiSairActionPerformed
 
@@ -379,7 +387,7 @@ public class PrincipalView extends javax.swing.JFrame {
     }//GEN-LAST:event_jmiClientesActionPerformed
 
     private void jmiProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiProdutosActionPerformed
-        ProdutoView produtoView = new ProdutoView();
+        NewProdutoView produtoView = new NewProdutoView();
         painelInterno.add(produtoView);
         produtoView.setVisible(true);
     }//GEN-LAST:event_jmiProdutosActionPerformed
@@ -391,20 +399,17 @@ public class PrincipalView extends javax.swing.JFrame {
     }//GEN-LAST:event_jmiVendasActionPerformed
 
     private void jmiPdvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiPdvActionPerformed
-        // TODO add your handling code here:
         Pdv1View pdvView = new Pdv1View();
         pdvView.setVisible(true);
     }//GEN-LAST:event_jmiPdvActionPerformed
 
     private void jmiAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiAboutActionPerformed
-        // TODO add your handling code here:
         AboutView aboutView = new AboutView();
         painelInterno.add(aboutView);
         aboutView.setVisible(true);
     }//GEN-LAST:event_jmiAboutActionPerformed
 
     private void jmiUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiUsuarioActionPerformed
-        // TODO add your handling code here:
         UsuarioView usuarioView = new UsuarioView();
         painelInterno.add(usuarioView);
         usuarioView.setVisible(true);
@@ -455,7 +460,7 @@ public class PrincipalView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVendaActionPerformed
 
     private void btnProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProdutoActionPerformed
-        ProdutoView produtoView = new ProdutoView();
+        NewProdutoView produtoView = new NewProdutoView();
         painelInterno.add(produtoView);
         produtoView.setVisible(true);
     }//GEN-LAST:event_btnProdutoActionPerformed

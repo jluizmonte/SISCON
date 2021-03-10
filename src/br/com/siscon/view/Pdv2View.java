@@ -73,7 +73,7 @@ public class Pdv2View extends javax.swing.JFrame {
         quantidade = 1;
         setarOperador();
         limparCampos();
-        setarOperador();
+        this.setTitle("PDV - SISCON");
 
     }
 
@@ -124,15 +124,16 @@ public class Pdv2View extends javax.swing.JFrame {
         jmiSobre = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(208, 240, 214));
+        setBackground(new java.awt.Color(0, 112, 192));
 
-        jPanel1.setBackground(new java.awt.Color(208, 240, 214));
+        jPanel1.setBackground(new java.awt.Color(0, 112, 192));
 
-        panel6.setBackground(new java.awt.Color(208, 240, 214));
+        panel6.setBackground(new java.awt.Color(0, 112, 192));
 
-        panel2.setBackground(new java.awt.Color(208, 240, 214));
+        panel2.setBackground(new java.awt.Color(0, 112, 192));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel7.setText("VALOR BRUTO");
 
@@ -146,6 +147,7 @@ public class Pdv2View extends javax.swing.JFrame {
         });
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel5.setText("QUANTIDADE");
 
@@ -154,6 +156,7 @@ public class Pdv2View extends javax.swing.JFrame {
         jtfQuantidade.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel6.setText("VALOR RECEBIDO");
 
@@ -162,6 +165,7 @@ public class Pdv2View extends javax.swing.JFrame {
         jtfValorRecebido.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel8.setText("VALOR A PAGAR");
 
@@ -175,15 +179,17 @@ public class Pdv2View extends javax.swing.JFrame {
         });
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel9.setText("FORMA PAGAMENTO");
 
         jlFormaPagamento.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        jlFormaPagamento.setForeground(new java.awt.Color(238, 17, 17));
+        jlFormaPagamento.setForeground(new java.awt.Color(255, 0, 0));
         jlFormaPagamento.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jlFormaPagamento.setText("1- A VISTA");
+        jlFormaPagamento.setText("1- À VISTA");
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("DESCONTO");
 
         jtfDesconto.setEditable(false);
@@ -194,42 +200,37 @@ public class Pdv2View extends javax.swing.JFrame {
         panel2Layout.setHorizontalGroup(
             panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel2Layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
+                .addContainerGap(12, Short.MAX_VALUE)
                 .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
-                        .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(panel2Layout.createSequentialGroup()
-                                    .addGap(22, 22, 22)
-                                    .addComponent(jLabel5))
-                                .addComponent(jtfQuantidade, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(panel2Layout.createSequentialGroup()
-                                    .addGap(20, 20, 20)
-                                    .addComponent(jLabel7))
-                                .addComponent(jtfValorBruto, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
-                        .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtfDesconto, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
-                                .addComponent(jLabel10)
-                                .addGap(40, 40, 40))
-                            .addComponent(jtfValorRecebido, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jtfValorPagar, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(panel2Layout.createSequentialGroup()
-                                    .addGap(11, 11, 11)
-                                    .addComponent(jLabel8)))
-                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
-                        .addComponent(jlFormaPagamento)
-                        .addGap(58, 58, 58))))
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panel2Layout.createSequentialGroup()
+                            .addGap(22, 22, 22)
+                            .addComponent(jLabel5))
+                        .addComponent(jtfQuantidade, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(panel2Layout.createSequentialGroup()
+                            .addGap(20, 20, 20)
+                            .addComponent(jLabel7))
+                        .addComponent(jtfValorBruto, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jtfDesconto, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
+                            .addComponent(jLabel10)
+                            .addGap(40, 40, 40))
+                        .addComponent(jtfValorRecebido, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel6)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtfValorPagar, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panel2Layout.createSequentialGroup()
+                                .addGap(11, 11, 11)
+                                .addComponent(jLabel8)))
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18))
+            .addGroup(panel2Layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addComponent(jlFormaPagamento)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         panel2Layout.setVerticalGroup(
             panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -245,10 +246,10 @@ public class Pdv2View extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jlFormaPagamento, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
                 .addGap(9, 9, 9)
+                .addComponent(jlFormaPagamento, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel10)
@@ -281,6 +282,9 @@ public class Pdv2View extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jScrollPane1.setBackground(new java.awt.Color(0, 112, 192));
+        jScrollPane1.setForeground(new java.awt.Color(0, 112, 192));
+
         jtProdutos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -300,28 +304,34 @@ public class Pdv2View extends javax.swing.JFrame {
         jtProdutos.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jtProdutos);
 
-        jPanel2.setBackground(new java.awt.Color(54, 64, 54));
+        jPanel2.setBackground(new java.awt.Color(0, 112, 192));
 
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Caixa:");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(238, 17, 17));
+        jLabel4.setForeground(new java.awt.Color(255, 0, 0));
         jLabel4.setText("01");
 
         jlOperador.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jlOperador.setForeground(new java.awt.Color(238, 17, 17));
+        jlOperador.setForeground(new java.awt.Color(255, 0, 0));
         jlOperador.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlOperador.setText("1- ADMINISTRADOR");
 
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Status:");
 
         jlStatus.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        jlStatus.setForeground(new java.awt.Color(238, 17, 17));
+        jlStatus.setForeground(new java.awt.Color(255, 0, 0));
         jlStatus.setText("OCUPADO");
 
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Operador:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -375,14 +385,16 @@ public class Pdv2View extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 433, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 435, Short.MAX_VALUE))
             .addComponent(panel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel3.setBackground(new java.awt.Color(208, 240, 213));
+        jPanel3.setBackground(new java.awt.Color(0, 112, 192));
 
+        jLabel14.setBackground(new java.awt.Color(255, 255, 255));
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("F3 EXCLUIR PRODUTO F4 ALTERAR QUANTIDADE F5 FINALIZAR VENDA F6 PESQUISAR PRODUTOS F7 CANCELAR F8 FECHAR CAIXA F9 INSERIR PRODUTO F2 SAIR");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -391,8 +403,8 @@ public class Pdv2View extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel14)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, 1172, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -406,14 +418,9 @@ public class Pdv2View extends javax.swing.JFrame {
         jMenuBar1.setForeground(new java.awt.Color(47, 87, 151));
         jMenuBar1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        jMenu1.setBackground(new java.awt.Color(47, 87, 151));
-        jMenu1.setForeground(new java.awt.Color(47, 87, 151));
         jMenu1.setText("Arquivo");
-        jMenu1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jmiSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, 0));
-        jmiSair.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jmiSair.setForeground(new java.awt.Color(47, 87, 151));
         jmiSair.setText("Sair");
         jmiSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -424,14 +431,9 @@ public class Pdv2View extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setBackground(new java.awt.Color(47, 87, 151));
-        jMenu2.setForeground(new java.awt.Color(47, 87, 151));
         jMenu2.setText("Comandos");
-        jMenu2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jmiExcluir.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F3, 0));
-        jmiExcluir.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jmiExcluir.setForeground(new java.awt.Color(47, 87, 151));
         jmiExcluir.setText("Excluir Produto");
         jmiExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -441,8 +443,6 @@ public class Pdv2View extends javax.swing.JFrame {
         jMenu2.add(jmiExcluir);
 
         jmiAlteraQuantidade.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, 0));
-        jmiAlteraQuantidade.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jmiAlteraQuantidade.setForeground(new java.awt.Color(47, 87, 151));
         jmiAlteraQuantidade.setText("Alterar Quantidade");
         jmiAlteraQuantidade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -452,8 +452,6 @@ public class Pdv2View extends javax.swing.JFrame {
         jMenu2.add(jmiAlteraQuantidade);
 
         jmiFinalizaVenda.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F5, 0));
-        jmiFinalizaVenda.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jmiFinalizaVenda.setForeground(new java.awt.Color(47, 87, 151));
         jmiFinalizaVenda.setText("Finalizar Venda");
         jmiFinalizaVenda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -463,8 +461,6 @@ public class Pdv2View extends javax.swing.JFrame {
         jMenu2.add(jmiFinalizaVenda);
 
         jmiPesquisaProdutos.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F6, 0));
-        jmiPesquisaProdutos.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jmiPesquisaProdutos.setForeground(new java.awt.Color(47, 87, 151));
         jmiPesquisaProdutos.setText("Pesquisar Produtos");
         jmiPesquisaProdutos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -474,8 +470,6 @@ public class Pdv2View extends javax.swing.JFrame {
         jMenu2.add(jmiPesquisaProdutos);
 
         jmiCancelar.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F7, 0));
-        jmiCancelar.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jmiCancelar.setForeground(new java.awt.Color(47, 87, 151));
         jmiCancelar.setText("Cancelar");
         jmiCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -485,8 +479,6 @@ public class Pdv2View extends javax.swing.JFrame {
         jMenu2.add(jmiCancelar);
 
         jmiFecharCaixa.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F8, 0));
-        jmiFecharCaixa.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jmiFecharCaixa.setForeground(new java.awt.Color(47, 87, 151));
         jmiFecharCaixa.setText("Fechar Caixa");
         jmiFecharCaixa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -496,8 +488,6 @@ public class Pdv2View extends javax.swing.JFrame {
         jMenu2.add(jmiFecharCaixa);
 
         jmiInserirProduto.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F9, 0));
-        jmiInserirProduto.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jmiInserirProduto.setForeground(new java.awt.Color(47, 87, 151));
         jmiInserirProduto.setText("Inserir Produto");
         jmiInserirProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -508,13 +498,8 @@ public class Pdv2View extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setBackground(new java.awt.Color(47, 87, 151));
-        jMenu3.setForeground(new java.awt.Color(47, 87, 151));
         jMenu3.setText("Ajuda");
-        jMenu3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        jmiSobre.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jmiSobre.setForeground(new java.awt.Color(47, 87, 151));
         jmiSobre.setText("Sobre");
         jmiSobre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -627,25 +612,25 @@ public class Pdv2View extends javax.swing.JFrame {
     }//GEN-LAST:event_jtfValorPagarActionPerformed
 
     private void pegarConteudo() {
-        jlStatus.setText("OCUPADO");
-        jlStatus.setForeground(Color.red);
-        DefaultTableModel modelo = (DefaultTableModel) jtProdutos.getModel();
-        try {
-            produtoModel = produtoService.getProdutoDAO(codigo);
-            modelo.addRow(new Object[]{
-                modelo.getRowCount() + 1,
-                produtoModel.getProCodigoProduto(),
-                produtoModel.getProDescricao(),
-                quantidade,
-                produtoModel.getProValorUnitario(),
-                produtoModel.getProValorUnitario() * quantidade
-            });
-            jtfValorBruto.setText(String.valueOf(somaValorTotal()));
-            jtfQuantidade.setText(String.valueOf(quantidade));
-            quantidade = 1;
-        } catch (NumberFormatException e) {
-            //JOptionPane.showMessageDialog(this, "Informe neste campo apenas números", "Erro", JOptionPane.ERROR_MESSAGE);
-        }
+//        jlStatus.setText("OCUPADO");
+//        jlStatus.setForeground(Color.red);
+//        DefaultTableModel modelo = (DefaultTableModel) jtProdutos.getModel();
+//        try {
+//            produtoModel = produtoService.getProdutoDAO(codigo);
+//            modelo.addRow(new Object[]{
+//                modelo.getRowCount() + 1,
+//                produtoModel.getProCodigoProduto(),
+//                produtoModel.getProDescricao(),
+//                quantidade,
+//                produtoModel.getProValor(),
+//                produtoModel.getProValorUnitario() * quantidade
+//            });
+//            jtfValorBruto.setText(String.valueOf(somaValorTotal()));
+//            jtfQuantidade.setText(String.valueOf(quantidade));
+//            quantidade = 1;
+//        } catch (NumberFormatException e) {
+//            //JOptionPane.showMessageDialog(this, "Informe neste campo apenas números", "Erro", JOptionPane.ERROR_MESSAGE);
+//        }
     }
 
     private float somaValorTotal() {
@@ -704,12 +689,12 @@ public class Pdv2View extends javax.swing.JFrame {
 
             //produto
             produtoModel.setProCodigoProduto(codigoProduto);
-            produtoModel.setProQuantidadeEstoque(produtoService.getProdutoDAO(codigoProduto).getProQuantidadeEstoque() - Integer.parseInt(jtProdutos.getValueAt(i, 3).toString()));
+//            produtoModel.setProQuantidadeEstoque(produtoService.getProdutoDAO(codigoProduto).getProQuantidadeEstoque() - Integer.parseInt(jtProdutos.getValueAt(i, 3).toString()));
             listaVendasProdutosModel.add(vendasProdutosModel);
             listaProdutoModel.add(produtoModel);
         }
         if (vendasProdutosService.salvarVendasProdutosDAO(listaVendasProdutosModel)) {
-            produtoService.alterarEstoqueProdutosDAO(listaProdutoModel);
+//            produtoService.alterarEstoqueProdutosDAO(listaProdutoModel);
             limparCampos();
         } else {
             JOptionPane.showMessageDialog(this, "Erro ao salvar os produtos da venda!", "Erro", JOptionPane.ERROR_MESSAGE);
@@ -727,37 +712,6 @@ public class Pdv2View extends javax.swing.JFrame {
         modelo.setNumRows(0);
         jlStatus.setText("CAIXA LIVRE");
         jlStatus.setForeground(Color.GREEN);
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Pdv2View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> {
-            new Pdv2View().setVisible(true);
-        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -19,10 +19,10 @@ public interface IProdutoDao {
 
     public boolean excluirProdutoDAO(int pIdProduto);
 
-    public boolean alterarEstoqueProdutosDAO(ArrayList<ProdutoModel> pListaProdutoModel);
-
     public ProdutoModel retornarProdutoDAO(String pProdutoNome);
 
     public ProdutoModel filtrarEstoqueProdutosDAO(String pEstoqueProduto);
+
+    public ProdutoModel retornarUltimoCodigoDAO();
 
 }

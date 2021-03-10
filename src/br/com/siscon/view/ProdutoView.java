@@ -367,11 +367,11 @@ public class ProdutoView extends javax.swing.JInternalFrame {
             produtoModel = produtoService.getProdutoDAO(codigoProduto);
 
             //colocar os dados do BD na tabela
-            jtfCodigoBarras.setText(String.valueOf(produtoModel.getProCodigoBarras()));
-            jtfDescricaoProduto.setText(produtoModel.getProDescricao());
-            jtfQuantidadeProduto.setText(String.valueOf(produtoModel.getProQuantidadeEstoque()));
-            jtfValorTotal.setText(String.valueOf((produtoModel.getProValorTotal())));
-            jtfValorUnitario.setText(String.valueOf(produtoModel.getProValorUnitario()));
+//            jtfCodigoBarras.setText(String.valueOf(produtoModel.getProCodigoBarras()));
+//            jtfDescricaoProduto.setText(produtoModel.getProDescricao());
+//            jtfQuantidadeProduto.setText(String.valueOf(produtoModel.getProQuantidadeEstoque()));
+//            jtfValorTotal.setText(String.valueOf((produtoModel.getProValorTotal())));
+//            jtfValorUnitario.setText(String.valueOf(produtoModel.getProValorUnitario()));
             jtfObservacao.setText(jtfObservacao.getText());
             dpDataEntrada.setText(produtoModel.getProDataEntrada());
 
@@ -435,10 +435,10 @@ public class ProdutoView extends javax.swing.JInternalFrame {
         for (int i = 0; i < cont; i++) {
             modelo.addRow(new Object[]{
                 listaProdutoModel.get(i).getProCodigoProduto(),
-                listaProdutoModel.get(i).getProCodigoBarras(),
+        //        listaProdutoModel.get(i).getProCodigoBarras(),
                 listaProdutoModel.get(i).getProDescricao(),
-                listaProdutoModel.get(i).getProQuantidadeEstoque(),
-                listaProdutoModel.get(i).getProValorTotal()
+     //           listaProdutoModel.get(i).getProQuantidadeEstoque(),
+   //             listaProdutoModel.get(i).getProValorTotal()
             });
         }
     }
@@ -446,10 +446,10 @@ public class ProdutoView extends javax.swing.JInternalFrame {
     private void salvarProduto() {
         // Salva um novo produto no BD e atualiza a tabela
         produtoModel.setProDescricao(jtfDescricaoProduto.getText().toUpperCase());
-        produtoModel.setProQuantidadeEstoque(Integer.parseInt(jtfQuantidadeProduto.getText()));
-        produtoModel.setProValorTotal(formatador.converterVirgulaParaPonto(jtfValorTotal.getText()));
-        produtoModel.setProValorUnitario(formatador.converterVirgulaParaPonto(jtfValorUnitario.getText()));
-        produtoModel.setProCodigoBarras(jtfCodigoBarras.getText());
+//        produtoModel.setProQuantidadeEstoque(Integer.parseInt(jtfQuantidadeProduto.getText()));
+//        produtoModel.setProValorTotal(formatador.converterVirgulaParaPonto(jtfValorTotal.getText()));
+//        produtoModel.setProValorUnitario(formatador.converterVirgulaParaPonto(jtfValorUnitario.getText()));
+//        produtoModel.setProCodigoBarras(jtfCodigoBarras.getText());
         produtoModel.setProDataEntrada(dpDataEntrada.getText());
         produtoModel.setProObservacao(jtfObservacao.getText().toUpperCase());
         /**
@@ -476,10 +476,10 @@ public class ProdutoView extends javax.swing.JInternalFrame {
     private void alterarProduto() {
         // altera e salva o  produto no BD e atualiza a tabela
         produtoModel.setProDescricao(jtfDescricaoProduto.getText().toUpperCase());
-        produtoModel.setProQuantidadeEstoque(Integer.parseInt(jtfQuantidadeProduto.getText()));
-        produtoModel.setProValorTotal(formatador.converterVirgulaParaPonto(jtfValorTotal.getText()));
-        produtoModel.setProValorUnitario(formatador.converterVirgulaParaPonto(jtfValorUnitario.getText()));
-        produtoModel.setProCodigoBarras(jtfCodigoBarras.getText());
+//        produtoModel.setProQuantidadeEstoque(Integer.parseInt(jtfQuantidadeProduto.getText()));
+//        produtoModel.setProValorTotal(formatador.converterVirgulaParaPonto(jtfValorTotal.getText()));
+//        produtoModel.setProValorUnitario(formatador.converterVirgulaParaPonto(jtfValorUnitario.getText()));
+//        produtoModel.setProCodigoBarras(jtfCodigoBarras.getText());
         produtoModel.setProDataEntrada(dpDataEntrada.getText());
         produtoModel.setProObservacao(jtfObservacao.getText().toUpperCase());
 

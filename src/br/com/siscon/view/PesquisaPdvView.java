@@ -34,7 +34,7 @@ public class PesquisaPdvView extends javax.swing.JDialog {
         Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(caminhoImagem);
         setIconImage(iconeTitulo);
         initComponents();
-        carregarProdutos();
+        //   carregarProdutos();
     }
 
     /**
@@ -165,74 +165,6 @@ public class PesquisaPdvView extends javax.swing.JDialog {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_jbOkActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PesquisaPdvView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(() -> {
-            PesquisaPdvView dialog = new PesquisaPdvView(new javax.swing.JFrame(), true);
-            dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                @Override
-                public void windowClosing(java.awt.event.WindowEvent e) {
-                    System.exit(0);
-                }
-            });
-            dialog.setVisible(true);
-        });
-    }
-
-    private void carregarProdutos() {
-        /**
-         * Array que buscará no BD (atraves do Controller) os dados para serem
-         * exibidos na tabela
-         */
-        listaProdutoModel = produtoService.getListaProdutoDAO();
-        DefaultTableModel modelo = (DefaultTableModel) jtProduto.getModel();
-
-        //Setando a quantidade de linhas que a tabela para não haver duplicação de dados
-        modelo.setNumRows(0);
-        // insere os produtos na tabela
-        int cont = listaProdutoModel.size();
-        for (int i = 0; i < cont; i++) {
-            modelo.addRow(new Object[]{
-                listaProdutoModel.get(i).getProCodigoProduto(),
-                listaProdutoModel.get(i).getProCodigoBarras(),
-                listaProdutoModel.get(i).getProDataEntrada(),
-                listaProdutoModel.get(i).getProDescricao(),
-                listaProdutoModel.get(i).getProObservacao(),
-                listaProdutoModel.get(i).getProQuantidadeEstoque(),
-                listaProdutoModel.get(i).getProValorTotal(),
-                listaProdutoModel.get(i).getProValorUnitario()
-            });
-        }
-    }
 
     private void pesquisaProdutos() {
         DefaultTableModel modelo = (DefaultTableModel) this.jtProduto.getModel();

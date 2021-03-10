@@ -81,9 +81,9 @@ public class LoginView extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addGap(22, 22, 22))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,7 +92,7 @@ public class LoginView extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(16, 16, 16))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
+                .addGap(17, 17, 17)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -113,7 +113,8 @@ public class LoginView extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(0, 179, 227));
 
         jbSair.setBackground(new java.awt.Color(0, 89, 96));
-        jbSair.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jbSair.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jbSair.setForeground(new java.awt.Color(255, 255, 255));
         jbSair.setText("Sair");
         jbSair.setToolTipText("Sair da Aplicação");
         jbSair.addActionListener(new java.awt.event.ActionListener() {
@@ -122,7 +123,8 @@ public class LoginView extends javax.swing.JFrame {
             }
         });
 
-        jtfLogin.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jtfLogin.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jtfLogin.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtfLogin.setBorder(null);
         jtfLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,6 +141,7 @@ public class LoginView extends javax.swing.JFrame {
         jLabel4.setText("Senha:");
 
         jtfSenha.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jtfSenha.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtfSenha.setBorder(null);
         jtfSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,7 +150,8 @@ public class LoginView extends javax.swing.JFrame {
         });
 
         jbEntrar.setBackground(new java.awt.Color(185, 58, 50));
-        jbEntrar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jbEntrar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jbEntrar.setForeground(new java.awt.Color(255, 255, 255));
         jbEntrar.setText("Entrar");
         jbEntrar.setToolTipText("Entrar no Sistema");
         jbEntrar.addActionListener(new java.awt.event.ActionListener() {
@@ -183,10 +187,10 @@ public class LoginView extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jtfLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

@@ -6,7 +6,7 @@ package br.com.siscon.model;
  */
 public class SessaoUsuarioModel {
 
-    public static int codigoUsuario;
-    public static String nomeUsuario;
-    public static String loginUsuario;
+    public static int codigoUsuario = Integer.parseInt("1");
+    public static String nomeUsuario = "JOSÉ LUIZ DO MONTE";
+    public static String loginUsuario = "admin";
 }

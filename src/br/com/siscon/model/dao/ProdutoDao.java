@@ -23,23 +23,15 @@ public class ProdutoDao extends ConexaoMySql implements IProdutoDao {
             this.conectar();
             return this.insertSQL(
                     "INSERT INTO tbl_produto ("
-                    //                    + "pro_codigo_produto,"
                     + "pro_descricao,"
-                    + "pro_observacao,"
-                    + "pro_quantidade_estoque,"
-                    + "pro_valor_total,"
-                    + "pro_valor_unitario,"
-                    + "pro_codigo_barra,"
-                    + "pro_data_entrada"
+                    + "pro_valor,"
+                    + "pro_data_entrada,"
+                    + "pro_observacao"
                     + ") VALUES ("
-                    //                    + "'" + pProdutoModel.getProCodigoProduto() + "',"
                     + "'" + pProdutoModel.getProDescricao() + "',"
-                    + "'" + pProdutoModel.getProObservacao() + "',"
-                    + "'" + pProdutoModel.getProQuantidadeEstoque() + "',"
-                    + "'" + pProdutoModel.getProValorTotal() + "',"
-                    + "'" + pProdutoModel.getProValorUnitario() + "',"
-                    + "'" + pProdutoModel.getProCodigoBarras() + "',"
-                    + "'" + pProdutoModel.getProDataEntrada() + "'"
+                    + "'" + pProdutoModel.getProValor() + "',"
+                    + "'" + pProdutoModel.getProDataEntrada() + "',"
+                    + "'" + pProdutoModel.getProObservacao() + "'"
                     + ");"
             );
         } catch (Exception e) {
@@ -71,13 +63,9 @@ public class ProdutoDao extends ConexaoMySql implements IProdutoDao {
             while (this.getResultSet().next()) {
                 produtoModel.setProCodigoProduto(this.getResultSet().getInt(1));
                 produtoModel.setProDescricao(this.getResultSet().getString(2));
-                produtoModel.setProObservacao(this.getResultSet().getString(3));
-                produtoModel.setProQuantidadeEstoque(this.getResultSet().getInt(4));
-                produtoModel.setProValorTotal(this.getResultSet().getDouble(5));
-                produtoModel.setProValorUnitario(this.getResultSet().getDouble(6));
-                produtoModel.setProCodigoBarras(this.getResultSet().getString(7));
-                produtoModel.setProDataEntrada(this.getResultSet().getString(8));
-//                produtoModel.setProDataEntrada(this.getResultSet().getDate(9));
+                produtoModel.setProValor(this.getResultSet().getDouble(3));
+                produtoModel.setProDataEntrada(this.getResultSet().getString(4));
+                produtoModel.setProObservacao(this.getResultSet().getString(5));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -106,13 +94,9 @@ public class ProdutoDao extends ConexaoMySql implements IProdutoDao {
                 produtoModel = new ProdutoModel();
                 produtoModel.setProCodigoProduto(this.getResultSet().getInt(1));
                 produtoModel.setProDescricao(this.getResultSet().getString(2));
-                produtoModel.setProObservacao(this.getResultSet().getString(3));
-                produtoModel.setProQuantidadeEstoque(this.getResultSet().getInt(4));
-                produtoModel.setProValorTotal(this.getResultSet().getDouble(5));
-                produtoModel.setProValorUnitario(this.getResultSet().getDouble(6));
-                produtoModel.setProCodigoBarras(this.getResultSet().getString(7));
-                produtoModel.setProDataEntrada(this.getResultSet().getString(8));
-//                produtoModel.setProDataEntrada(this.getResultSet().getDate(9));
+                produtoModel.setProValor(this.getResultSet().getDouble(3));
+                produtoModel.setProDataEntrada(this.getResultSet().getString(4));
+                produtoModel.setProObservacao(this.getResultSet().getString(5));
                 listamodelProduto.add(produtoModel);
             }
         } catch (Exception e) {
@@ -137,12 +121,9 @@ public class ProdutoDao extends ConexaoMySql implements IProdutoDao {
                     "UPDATE tbl_produto SET "
                     + "pro_codigo_produto = '" + pProdutoModel.getProCodigoProduto() + "',"
                     + "pro_descricao = '" + pProdutoModel.getProDescricao() + "',"
-                    + "pro_observacao = '" + pProdutoModel.getProObservacao() + "',"
-                    + "pro_quantidade_estoque = '" + pProdutoModel.getProQuantidadeEstoque() + "',"
-                    + "pro_valor_total = '" + pProdutoModel.getProValorTotal() + "',"
-                    + "pro_valor_unitario = '" + pProdutoModel.getProValorUnitario() + "',"
-                    + "pro_codigo_barra = '" + pProdutoModel.getProCodigoBarras() + "',"
-                    + "pro_data_entrada = '" + pProdutoModel.getProDataEntrada() + "'"
+                    + "pro_valor = '" + pProdutoModel.getProValor() + "',"
+                    + "pro_data_entrada = '" + pProdutoModel.getProDataEntrada() + "',"
+                    + "pro_observacao = '" + pProdutoModel.getProObservacao() + "'"
                     + " WHERE "
                     + "pro_codigo_produto = '" + pProdutoModel.getProCodigoProduto() + "'"
             );
@@ -179,32 +160,6 @@ public class ProdutoDao extends ConexaoMySql implements IProdutoDao {
     }
 
     /**
-     * Alterar estoque de produtos no banco
-     *
-     * @param pListaModelProdutos
-     * @return
-     */
-    @Override
-    public boolean alterarEstoqueProdutosDAO(ArrayList<ProdutoModel> pListaModelProdutos) {
-        try {
-            this.conectar();
-            for (int i = 0; i < pListaModelProdutos.size(); i++) {
-                this.executarUpdateDeleteSQL(
-                        "UPDATE tbl_produto SET "
-                        + "pro_quantidade_estoque = '" + pListaModelProdutos.get(i).getProQuantidadeEstoque() + "'"
-                        + " WHERE pro_codigo_produto = '" + pListaModelProdutos.get(i).getProCodigoProduto() + "'"
-                );
-            }
-            return true;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        } finally {
-            this.fecharConexao();
-        }
-    }
-
-    /**
      * retornar um produto pelo nome
      *
      * @param pNomeProduto
@@ -223,15 +178,9 @@ public class ProdutoDao extends ConexaoMySql implements IProdutoDao {
                 produtoModel = new ProdutoModel();
                 produtoModel.setProCodigoProduto(this.getResultSet().getInt(1));
                 produtoModel.setProDescricao(this.getResultSet().getString(2));
-                produtoModel.setProObservacao(this.getResultSet().getString(3));
-                produtoModel.setProQuantidadeEstoque(this.getResultSet().getInt(4));
-                produtoModel.setProValorTotal(this.getResultSet().getDouble(5));
-                produtoModel.setProValorUnitario(this.getResultSet().getDouble(6));
-                produtoModel.setProCodigoBarras(this.getResultSet().getString(7));
-                produtoModel.setProDataEntrada(this.getResultSet().getString(8));
-//                produtoModel.setProDataEntrada(this.getResultSet().getDate(9));
-                //  listamodelProdutos.add(modelProduto);
-
+                produtoModel.setProValor(this.getResultSet().getDouble(3));
+                produtoModel.setProDataEntrada(this.getResultSet().getString(4));
+                produtoModel.setProObservacao(this.getResultSet().getString(5));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -257,15 +206,32 @@ public class ProdutoDao extends ConexaoMySql implements IProdutoDao {
                 produtoModel = new ProdutoModel();
                 produtoModel.setProCodigoProduto(this.getResultSet().getInt(1));
                 produtoModel.setProDescricao(this.getResultSet().getString(2));
-                produtoModel.setProObservacao(this.getResultSet().getString(3));
-                produtoModel.setProQuantidadeEstoque(this.getResultSet().getInt(4));
-                produtoModel.setProValorTotal(this.getResultSet().getDouble(5));
-                produtoModel.setProValorUnitario(this.getResultSet().getDouble(6));
-                produtoModel.setProCodigoBarras(this.getResultSet().getString(7));
-                produtoModel.setProDataEntrada(this.getResultSet().getString(8));
-//                produtoModel.setProDataEntrada(this.getResultSet().getDate(9));
-                //  listamodelProdutos.add(modelProduto);
+                produtoModel.setProValor(this.getResultSet().getDouble(3));
+                produtoModel.setProDataEntrada(this.getResultSet().getString(4));
+                produtoModel.setProObservacao(this.getResultSet().getString(5));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            this.fecharConexao();
+        }
+        return produtoModel;
+    }
 
+    /**
+     * Filtra produtos pelo último ID do produto
+     *
+     * @return
+     */
+    @Override
+    public ProdutoModel retornarUltimoCodigoDAO() {
+        ProdutoModel produtoModel = new ProdutoModel();
+        try {
+            this.conectar();
+            this.executarSQL("SELECT COUNT(pro_codigo_produto) FROM tbl_produto;");
+            while (this.getResultSet().next()) {
+                produtoModel = new ProdutoModel();
+                produtoModel.setQtdeProdutos(this.getResultSet().getInt(1));
             }
         } catch (SQLException e) {
             e.printStackTrace();

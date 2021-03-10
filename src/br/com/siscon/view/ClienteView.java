@@ -27,7 +27,7 @@ public class ClienteView extends javax.swing.JInternalFrame {
     public ClienteView() {
         initComponents();
         desabilitaHabilitaCampos(false); //desabilita o formulário
-       // carregarCliente(); //carrega os clientes já cadastrados na tabela
+        // carregarCliente(); //carrega os clientes já cadastrados na tabela
     }
 
     /**
@@ -69,6 +69,7 @@ public class ClienteView extends javax.swing.JInternalFrame {
         jtfEmail = new javax.swing.JTextField();
 
         setClosable(true);
+        setIconifiable(true);
         setResizable(true);
         setTitle("Cliente");
         setVisible(true);

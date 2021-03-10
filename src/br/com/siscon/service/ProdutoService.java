@@ -32,10 +32,6 @@ public class ProdutoService {
         return produtoDao.excluirProdutoDAO(pIdProduto);
     }
 
-    public boolean alterarEstoqueProdutosDAO(ArrayList<ProdutoModel> pListaProdutoModel) {
-        return produtoDao.alterarEstoqueProdutosDAO(pListaProdutoModel);
-    }
-
     public ProdutoModel retornarProdutoDAO(String pProdutoNome) {
         return produtoDao.retornarProdutoDAO(pProdutoNome);
     }
@@ -43,4 +39,9 @@ public class ProdutoService {
     public ProdutoModel filtrarEstoqueProdutosDAO(String pEstoqueProduto) {
         return produtoDao.filtrarEstoqueProdutosDAO(pEstoqueProduto);
     }
+
+    public ProdutoModel retornarUltimoCodigoDAO() {
+        return produtoDao.retornarUltimoCodigoDAO();
+    }
+
 }

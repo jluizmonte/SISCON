@@ -173,7 +173,7 @@ public class VendasView extends javax.swing.JInternalFrame {
         jLabel6.setText("Quantidade:");
 
         jbAdicionar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/siscon/imagens/Actions18x18/novo/icons8-mais-24.png"))); // NOI18N
+        jbAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/siscon/imagens/buttons/icons8-mais-24.png"))); // NOI18N
         jbAdicionar.setText("Adicionar");
         jbAdicionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -386,7 +386,7 @@ public class VendasView extends javax.swing.JInternalFrame {
                     .addComponent(jbNovo)
                     .addComponent(jbSalvar)
                     .addComponent(jbRemoverProdutos))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(9, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Cadastro", jPanel1);
@@ -538,8 +538,8 @@ public class VendasView extends javax.swing.JInternalFrame {
                 produtoModel.getProCodigoProduto(),
                 produtoModel.getProDescricao(),
                 jtfQuantidade.getText(),
-                produtoModel.getProValorUnitario(),
-                quantidade * produtoModel.getProValorUnitario()
+                produtoModel.getProValor(),
+                quantidade * produtoModel.getProValor()
             });
             somarValorTotalProduto();
             //  jtfQuantidade.setText(""); //talvez seja usado, serve para limpar o campo quantidade depois de adicionar um produto.
@@ -610,15 +610,12 @@ public class VendasView extends javax.swing.JInternalFrame {
             vendasProdutoModel.setVenProQuantidade(Integer.parseInt(jtProdutosVendas.getValueAt(i, 2).toString()));
             //produto
             produtoModel.setProCodigoProduto(codigoProduto);
-            produtoModel.setProQuantidadeEstoque(produtoService.retornarProdutoDAO(String.valueOf(codigoProduto)).getProQuantidadeEstoque()
-                    - Integer.parseInt(jtProdutosVendas.getValueAt(i, 2).toString()));
             listaVendasProdutoModel.add(vendasProdutoModel);
             listaProdutoModel.add(produtoModel);
         }
         //salvar os produtos da venda
         if (vendasProdutoService.salvarVendasProdutosDAO(listaVendasProdutoModel)) {
             // alterar estoque de produtos
-            produtoService.alterarEstoqueProdutosDAO(listaProdutoModel);
             //JOptionPane.showMessageDialog(this, "Produtos da venda salvo com sucesso!", "Atenção", JOptionPane.WARNING_MESSAGE);
             carregarVendas();
             limparFormulario();
@@ -779,22 +776,18 @@ public class VendasView extends javax.swing.JInternalFrame {
             vendasModel = new VendasModel();
             vendasProdutoModel = new VendasProdutosModel();
             produtoModel.setProCodigoProduto(listaProdutosVendasProdutosModel.get(i).getModelProdutos().getProCodigoProduto());
-            produtoModel.setProQuantidadeEstoque((listaProdutosVendasProdutosModel.get(i).getModelProdutos().getProQuantidadeEstoque()
-                    + listaProdutosVendasProdutosModel.get(i).getModelVendasProdutos().getVenProQuantidade()));
             listaProdutoModel.add(produtoModel);
         }
-        if (produtoService.alterarEstoqueProdutosDAO(listaProdutoModel)) {
-            vendasProdutoService.excluirVendasProdutosDAO(codigoVenda);
-            if (vendasService.excluirVendasDAO(codigoVenda)) {
-                JOptionPane.showMessageDialog(this, "Venda excluida com sucesso!", "Atenção", JOptionPane.WARNING_MESSAGE);
-                carregarVendas();
-                jbSalvar.setText("Salvar");
-            } else {
-                JOptionPane.showMessageDialog(this, "Erro ao excluir a venda", "Erro", JOptionPane.ERROR_MESSAGE);
-            }
+
+        vendasProdutoService.excluirVendasProdutosDAO(codigoVenda);
+        if (vendasService.excluirVendasDAO(codigoVenda)) {
+            JOptionPane.showMessageDialog(this, "Venda excluida com sucesso!", "Atenção", JOptionPane.WARNING_MESSAGE);
+            carregarVendas();
+            jbSalvar.setText("Salvar");
         } else {
             JOptionPane.showMessageDialog(this, "Erro ao excluir a venda", "Erro", JOptionPane.ERROR_MESSAGE);
         }
+
     }//GEN-LAST:event_jbExcluirActionPerformed
 
     private void jbAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAlterarActionPerformed
@@ -880,7 +873,7 @@ public class VendasView extends javax.swing.JInternalFrame {
      * comboBox
      */
     private void preencherCodigoCliente() {
-        clienteModel = clienteService.getClienteDAO(jcbNomeCliente.getSelectedItem().toString());
+//        clienteModel = clienteService.getClienteDAO(jcbNomeCliente.getSelectedItem().toString());
         jtfCodCliente.setText(String.valueOf(clienteModel.getIdCliente()));
     }
 
